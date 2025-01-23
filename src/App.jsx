@@ -50,7 +50,7 @@ const Home = () => {
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/react-website"> {/* Add basename */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/header" element={<Header />} />
