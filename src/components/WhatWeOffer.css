@@ -1,0 +1,125 @@
+/* General Styling */
+.what-we-offer {
+  font-family:"Poppins",sans-serif;
+  padding: 30px 90px; /* Add padding on the sides for smaller screens */
+  color: #333;
+  background-color: #f4f4f9;
+}
+
+/* Intro Section */
+.intro-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #004D9B;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 10px; /* Add padding for small screens */
+}
+
+/* Feature Card */
+.feature-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card .icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and small screens */
+@media (max-width: 768px) {
+  .intro-section h1 {
+    font-size: 2rem; /* Adjust heading size */
+  }
+
+  .intro-section p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+
+  .features-grid {
+    gap: 15px; /* Reduce grid gap */
+  }
+
+  .feature-card {
+    padding: 15px; /* Reduce card padding */
+  }
+
+  .feature-card h3 {
+    font-size: 1.2rem; /* Adjust title size */
+  }
+
+  .feature-card p {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .intro-section h1 {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .intro-section p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr; /* Single-column layout */
+  }
+
+  .feature-card {
+    padding: 10px; /* Further reduce card padding */
+  }
+
+  .feature-card h3 {
+    font-size: 1rem; /* Smaller title size */
+  }
+
+  .feature-card p {
+    font-size: 0.8rem; /* Smaller text size */
+  }
+}

@@ -1,0 +1,104 @@
+/* General Container Styling */
+.services-container {
+  padding: 40px;
+  font-family:"Poppins",sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Service Cards Grid */
+.service-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Card grid system */
+  gap: 25px; /* Space between cards */
+  margin-left: 12rem;
+  margin-right: 12rem;
+}
+
+/* Service Item Design */
+.service-item {
+  background-color: #ffffff;
+  border-radius: 15px; /* Smoothly rounded corners */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Hover Effect */
+.service-item:hover {
+  transform: translateY(-8px); /* Lifted on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Decorative Accent (New) */
+.service-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(45deg, #004D9B, #00A84D); /* Gradient accent bar */
+}
+
+/* Image Styling */
+.service-image {
+  width: 100%;
+  height: 200px; /* Adjusted for proportionality */
+  object-fit: cover;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Content Styling */
+.service-content {
+  padding: 20px; /* Added padding for text area */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center; /* Center-aligned content */
+}
+
+/* Title Styling */
+.service-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Description Styling */
+.service-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+  text-align: justify;
+}
+
+/* Hover Button Effect (Optional) */
+.service-item:hover .service-title {
+  color: #ff8a00; /* Change title color on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .page-title {
+      font-size: 24px;
+  }
+
+  .service-title {
+      font-size: 18px;
+  }
+
+  .service-description {
+      font-size: 12px;
+  }
+}

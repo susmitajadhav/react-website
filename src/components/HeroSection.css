@@ -1,0 +1,148 @@
+/* Hero Section Styling */
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; Full screen height */
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  width: 100%;
+  font-family:"Poppins",sans-serif;
+  height: 40rem;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+  z-index: 1;
+  max-height: 1200rem; /* Increased height */
+}
+
+
+.hero-content {
+  position: relative;
+  max-width: 800px;
+  padding: 20px;
+  z-index: 2; /* Ensure content appears above overlay */
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background-color: #01a74d;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #004D9B;
+}
+
+/* Carousel Styling */
+.carousel-container {
+  position: absolute;
+  top: 0; /* Align the carousel to the top */
+  bottom: 0; /* Align the carousel to the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%; /* Full screen height */
+  max-width: 100%;
+}
+
+.carousel-item {
+  text-align: center;
+  height: 100%; /* Ensure items take full height */
+}
+
+.carousel-image {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Ensure the image covers the container without distorting */
+}
+
+/* Slick Arrows Styling */
+.slick-prev, .slick-next {
+  background-color: rgba(0, 0, 0, 0.5); /* Arrow background */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Hover effect on arrows */
+}
+
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and small screens */
+@media (max-width: 768px) {
+  .hero-section{
+    height: 2rem;
+  }
+  .hero-title {
+    font-size: 32px; /* Smaller title */
+  }
+
+  .hero-description {
+    font-size: 16px; /* Smaller description */
+  }
+
+  .cta-button {
+    padding: 12px 24px; /* Adjust button size */
+    font-size: 16px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+ 
+  .hero-title {
+    font-size: 24px; /* Even smaller title */
+  }
+
+  .hero-description {
+    font-size: 14px; /* Smaller description */
+  }
+
+  .cta-button {
+    padding: 10px 20px; /* Adjust button size further */
+    font-size: 14px;
+  }
+
+  .carousel-container {
+    height: auto; /* Allow carousel to adapt to smaller heights */
+  }
+
+  .carousel-image {
+    height: 60vh; /* Reduce the height of images on smaller devices */
+  }
+}

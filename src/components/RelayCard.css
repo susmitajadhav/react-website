@@ -1,0 +1,68 @@
+/* src/components/RelayCard.css */
+
+.relay-card-container {
+    padding: 40px;
+    background-color: #f9f9f9;
+    margin: 20px;
+    font-family:"Poppins",sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .relay-card-container h1 {
+    font-size: 2.8em;
+    color: #2e3d49;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .image-section {
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .relay-card-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .features-list {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  
+  .features-list li {
+    margin: 10px 0;
+  }
+  
+  .features-list li strong {
+    color: #2e3d49;
+  }
+  
+  .applications {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #777;
+    margin-top: 20px;
+  }
+  
+  .contact-info {
+    font-size: 1.2em;
+    color: #444;
+    text-align: center;
+    margin-top: 30px;
+  }
+  

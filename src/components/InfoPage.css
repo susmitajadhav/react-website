@@ -1,0 +1,85 @@
+/* Service Info Page Styling */
+.info-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.info-image img {
+  max-width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-details {
+  flex: 1;
+  color: #333;
+  text-align: left;
+  min-width: 40%;
+}
+
+.info-details h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a3c4f;
+  margin-bottom: 20px;
+}
+
+.info-details p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.info-details h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a3c4f;
+  margin-top: 30px;
+}
+
+.info-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-details li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.info-details li::before {
+  content: '✔';
+  color: #1a3c4f;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .info-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .info-image {
+      margin-bottom: 30px;
+  }
+
+  .info-details {
+      text-align: center;
+  }
+}
