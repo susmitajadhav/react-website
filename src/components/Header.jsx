@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from React Router
-import './Header.css'; // Ensure the CSS file is correctly linked
+import { Link } from 'react-router-dom';
+import './Header.css';
 import logo from '../assets/logo.jpeg';
-
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Toggles the dropdown visibility
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  // Toggles the mobile menu visibility
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -17,43 +22,66 @@ const Header = () => {
       <div className="header-container">
         {/* Logo Section */}
         <div className="logo">
-          <Link to="/"> {/* Use Link for navigation */}
-          <img src={logo} alt="SAV-Tech Associate Logo" />
+          <Link to="/">
+            <img src={logo} alt="SAV-Tech Associate Logo" />
           </Link>
         </div>
 
+        {/* Hamburger Menu for Mobile */}
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          <div className={`line ${isMenuOpen ? 'open' : ''}`}></div>
+          <div className={`line ${isMenuOpen ? 'open' : ''}`}></div>
+          <div className={`line ${isMenuOpen ? 'open' : ''}`}></div>
+        </div>
+
         {/* Navigation Section */}
-        <nav className="nav-links">
+        <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
           <ul>
             <li>
-              <Link to="/">Home</Link> {/* Use Link for internal routing */}
+              <Link to="/" onClick={() => setIsMenuOpen(false)}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/aboutus">About Us</Link>
+              <Link to="/aboutus" onClick={() => setIsMenuOpen(false)}>
+                About Us
+              </Link>
             </li>
             <li>
-              <Link to="/gallery">Gallery</Link>
+              <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>
+                Gallery
+              </Link>
             </li>
-
-            {/* Dropdown Menu for "What We Do" */}
-            <div className="dropdown">
-              <a href="#!" className="dropdown-toggle" onClick={toggleDropdown}>
+            <li className="dropdown">
+              <a
+                href="#!"
+                className="dropdown-toggle"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleDropdown();
+                }}
+              >
                 What We Do
               </a>
               {isDropdownOpen && (
                 <div className="dropdown-menu">
                   <div className="dropdown-item">
-                    <Link to="/services">Services</Link>
+                    <Link to="/services" onClick={() => setIsMenuOpen(false)}>
+                      Services
+                    </Link>
                   </div>
                   <div className="dropdown-item">
-                    <Link to="/productlist">Product</Link>
+                    <Link to="/productlist" onClick={() => setIsMenuOpen(false)}>
+                      Product
+                    </Link>
                   </div>
                 </div>
               )}
-            </div>
-
+            </li>
             <li>
-              <Link to="/contactpage">Contact</Link>
+              <Link to="/contactpage" onClick={() => setIsMenuOpen(false)}>
+                Contact
+              </Link>
             </li>
           </ul>
         </nav>
