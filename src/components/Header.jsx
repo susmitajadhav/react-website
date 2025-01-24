@@ -17,8 +17,6 @@ const Header = () => {
         <div className="logo">
           <Link to="/"> {/* Use Link for navigation */}
           <img src={`${process.env.PUBLIC_URL}/img/logo.jpeg`} alt="SAV-Tech Associate Logo" />
-
-
           </Link>
         </div>
 
