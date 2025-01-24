@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from React Router
 import './Header.css'; // Ensure the CSS file is correctly linked
-import logo from '../assets/logo.jpeg';
-
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -18,7 +16,8 @@ const Header = () => {
         {/* Logo Section */}
         <div className="logo">
           <Link to="/"> {/* Use Link for navigation */}
-          <img src={logo} alt="SAV-Tech Associate Logo" />
+          <img src={`${process.env.PUBLIC_URL}/img/logo.jpeg`} alt="SAV-Tech Associate Logo" />
+
           </Link>
         </div>
 
