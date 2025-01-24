@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found</title>
+  <title>Redirecting...</title>
   <script>
-    // Redirect to index.html to handle routing via React Router
-    window.location.replace("/react-website/");
+    // Redirect to the index.html with the hash-based URL
+    const redirectTo = window.location.pathname.replace('/react-website', '');
+    window.location.replace('/react-website/#' + redirectTo);
   </script>
 </head>
 <body>

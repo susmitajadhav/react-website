@@ -10,31 +10,31 @@ import Footer from './components/Footer';
 import InfoPage from './components/InfoPage';
 import ContactPage from './components/ContactPage';
 import HeroSection from './components/HeroSection';
-import ServicesPage from './components/ServicesPage'; 
+import ServicesPage from './components/ServicesPage';
 import WhatWeOffer from './components/WhatWeOffer';
 import Manufacturing from './components/Manufacturing';
-import Gallery from './components/Gallery'; 
+import Gallery from './components/Gallery';
 import RelayCard from './components/RelayCard';
 import IndustrialPanelManufacturer from './components/IndustrialPanelManufacturer';
 import Services from './components/Services';
 import GetQuote from './components/GetQuote';
 import ConsultancyServices from './components/ConsultancyServices';
 import MechanicalEngineering from './components/MechanicalEngineering';
-import OM from './components/OM'
+import OM from './components/OM';
 import Electrical from './components/Electrical';
+
 const Home = () => {
   return (
     <>
       <Header />
-      <HeroSection/>
+      <HeroSection />
       <ProductList />
-      <ServicesPage /> 
-      <WhatWeOffer/>
+      <ServicesPage />
+      <WhatWeOffer />
       <InfoPage />
-      {/* <Gallery />  */}
+      {/* <Gallery /> */}
       {/* <ConsultancyServices /> */}
       {/* <MechanicalEngineering /> */}
-     
       {/* <OM /> */}
       {/* <Electrical /> */}
       {/* <Project /> */}
@@ -42,7 +42,6 @@ const Home = () => {
       {/* <IndustrialPanelManufacturer/> */}
       {/* <Manufacturing/> */}
       {/* <RelayCard/> */}
-
       <Footer />
     </>
   );
@@ -61,14 +60,14 @@ const App = () => {
         {/* <Route path="/mission" element={<Mission />} /> */}
         <Route path="/productlist" element={<ProductList />} />
         <Route path="/footer" element={<Footer />} />
-        <Route path="/infopage" elements={<InfoPage/>} />
+        <Route path="/infopage" element={<InfoPage />} /> {/* Fixed "elements" typo */}
         <Route path="/contactpage" element={<ContactPage />} />
         <Route path="/servicespage" element={<ServicesPage />} />
         <Route path="/whatweoffer" element={<WhatWeOffer />} />
-        <Route path="/manufacturing" element={<Manufacturing/>} />
-        <Route path="/mechanicalengineering" element={<MechanicalEngineering/>} />
-        <Route path="/relay-card" element={<RelayCard/>} />
-        <Route path="/industrial-panel-manufacturer" element={<IndustrialPanelManufacturer/>} />
+        <Route path="/manufacturing" element={<Manufacturing />} />
+        <Route path="/mechanicalengineering" element={<MechanicalEngineering />} />
+        <Route path="/relay-card" element={<RelayCard />} />
+        <Route path="/industrial-panel-manufacturer" element={<IndustrialPanelManufacturer />} />
         <Route path="/services" element={<Services />} />
         <Route path="/getquote" element={<GetQuote />} />
         <Route path="/gallery" element={<Gallery />} />
