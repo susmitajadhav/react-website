@@ -20,19 +20,21 @@ const Footer = () => {
           <div className="footer-right">
             <h4>Navigation</h4>
             <ul>
-              <li><a href="/home">Home</a></li>
-              <li><a href="/aboutus">About</a></li>
-              <li><a href="/services">Services</a></li>
-              <li><a href="/contactpage">Contact</a></li>
+              <li><a href="/react-website/home">Home</a></li>
+              <li><a href="/react-website/aboutus">About</a></li>
+              <li><a href="/react-website/services">Services</a></li>
+              <li><a href="/react-website/contactpage">Contact</a></li>
+
             </ul>
           </div>
 
           <div className="footer-right">
             <h4>Projects</h4>
             <ul>
-              <li><a href="/manufacturing">Manufacturing of Machineries</a></li>
-              <li><a href="/relay-card">RelayCard</a></li>
-              <li><a href="/industrial-panel-manufacturer">Industrial Panel Manufacturing</a></li>
+              <li><a href="/react-website/manufacturing">Manufacturing of Machineries</a></li>
+              <li><a href="/react-website/relay-card">RelayCard</a></li>
+              <li><a href="/react-website/industrial-panel-manufacturer">Industrial Panel Manufacturing</a></li>
+
             </ul>
             {/* Social Media Links Section */}
             <div className="footer-social">
@@ -57,7 +59,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-    </div>
+      </div>
     </footer >
   );
 };

@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <title>Redirecting...</title>
   <script>
-    // Redirect to the index.html with the hash-based URL
-    const redirectTo = window.location.pathname.replace('/react-website', '');
-    window.location.replace('/react-website/#' + redirectTo);
+    const redirectPath = window.location.pathname.replace('/react-website', '');
+    window.location.replace('/react-website/#' + redirectPath);
   </script>
+  
 </head>
 <body>
   <p>Redirecting...</p>
