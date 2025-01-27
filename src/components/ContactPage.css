@@ -24,9 +24,9 @@
 
 /* Content Section */
 .contact-content {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   max-width: 1200px;
   margin: 40px auto;
   gap: 20px;
