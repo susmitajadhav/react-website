@@ -24,7 +24,7 @@ const HeroSection = () => {
         <p className="hero-description">
           We provide innovative solutions to take your business to the next level.
         </p>
-        <a href="/services" className="cta-button">
+        <a href="/react-website/services" className="cta-button">
           Explore Our Services
         </a>
       </div>
