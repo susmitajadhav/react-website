@@ -8,7 +8,7 @@
   color: white;
   text-align: center;
   padding: 0 20px;
-  width: 100%;
+  /* width: 100%; */
   font-family:"Poppins",sans-serif;
   height: 40rem;
   overflow: hidden; /* Prevent scrollbars */
