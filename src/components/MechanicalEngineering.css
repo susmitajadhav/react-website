@@ -1,25 +1,26 @@
-.container {
-  display: flex;
+/* General Styles */
+.containers {
+  display: flex; /* Default flex layout for laptops and larger screens */
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
   gap: 20px;
   font-family: "Poppins", sans-serif;
-  flex-wrap: wrap; /* Ensures wrapping for smaller screens */
   box-sizing: border-box;
 }
 
 .image-container {
   flex: 1;
   text-align: center;
-  max-width: 100%; /* Prevents overflow */
+  max-width: 100%;
+  /* width: 50%; */
 }
 
 .image {
   width: 100%;
-  max-width: 500px;
-  height: auto;
+  max-width: 500px; /* Limits image width */
+  height: 15rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -30,7 +31,7 @@
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 100%; /* Ensures no overflow on smaller screens */
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -72,55 +73,85 @@
 
 /* Responsive Design */
 
-/* For tablets and small screens */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Stacks elements vertically */
-    align-items: center;
+/* For tablets and smaller screens (no display: flex) */
+@media (max-width: 1024px) {
+  .containers {
+    display: block; /* Stacks elements vertically */
     padding: 15px;
   }
 
-  .image-container, 
+  .image-container {
+    width: 100%; /* Full width of the container */
+    text-align: center; /* Centers the image */
+    margin-bottom: 10px; /* Adds spacing below the image */
+  }
+
+  .image {
+    width: 80%; /* Makes the image responsive */
+    max-width: 100%; /* Removes any restriction for smaller screens */
+    height: auto;
+    border-radius: 5px; /* Subtle rounding for aesthetics */
+  }
+
   .info-container {
-    max-width: 100%;
+    width: 100%; /* Full width of the container */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensures padding doesn't exceed width */
+    margin-top: 10px; /* Adds spacing above the info container */
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Adjusted font size */
+    text-align: center; /* Centers the title */
   }
 
-  .description, 
-  .list, 
-  .sub-list, 
+  .description,
+  .list,
+  .sub-list,
   .additional-info {
-    font-size: 0.95rem;
+    font-size: 0.95rem; /* Adjusted text size for smaller screens */
+    text-align: justify; /* Makes text easier to read */
+    margin-bottom: 10px; /* Adds spacing */
+  }
+
+  .list {
+    padding-left: 20px; /* Proper indentation for lists */
+  }
+
+  .sub-list {
+    padding-left: 15px; /* Slightly reduced indentation for sub-lists */
   }
 }
 
 /* For mobile devices */
 @media (max-width: 480px) {
-  .container {
-    gap: 15px; /* Reduces gap between elements */
+  .containers {
+    display: block; /* Ensures block layout for stacking */
     padding: 10px;
   }
 
+  .image-container {
+    margin-bottom: 10px; /* Adds spacing below the image */
+  }
+
   .image {
-    max-width: 100%;
-    border-radius: 5px;
+    width: 100%;
+    height: auto;
   }
 
   .info-container {
-    padding: 15px;
-    box-shadow: none; /* Simplifies design for small screens */
+    margin-top: 10px;
   }
 
   .title {
     font-size: 1.3rem;
   }
 
-  .description, 
-  .list, 
-  .sub-list, 
+  .description,
+  .list,
+  .sub-list,
   .additional-info {
     font-size: 0.9rem;
   }

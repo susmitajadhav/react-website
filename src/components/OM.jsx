@@ -1,5 +1,5 @@
 import React from "react";
-import "./MechanicalEngineering";
+import "./MechanicalEngineering.css";
 import Header from './Header';
 import Footer from './Footer';
 
@@ -7,7 +7,7 @@ const OM = () => {
   return (
     <div>
       <Header />
-      <div className="container">
+      <div className="containers">
         {/* Image Section */}
         <div className="image-container">
           <img

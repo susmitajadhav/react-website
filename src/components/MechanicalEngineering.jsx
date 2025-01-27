@@ -7,7 +7,7 @@ const MechanicalEngineering = () => {
   return (
     <div>
     <Header />
-    <div className="container">
+    <div className="containers">
       {/* Image Section */}
       <div className="image-container">
         <img
