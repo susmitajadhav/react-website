@@ -1,7 +1,7 @@
-/* ProductList Styles */
+/* Global Styles */
 .product-section {
   padding: 60px 20px;
-  font-family:"Poppins",sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f4f4f4;
 }
 
@@ -15,11 +15,11 @@
 
 .product-list {
   display: flex;
-  justify-content: space-between;
-  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap; Allow wrapping for responsiveness */
   gap: 30px;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  justify-content: center; /* Center align for all views */
+  margin: 0 auto; /* Center the section */
+  padding: 0 10px; /* Add padding for smaller screens */
 }
 
 .product-card {
@@ -27,7 +27,6 @@
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 30%;
   padding: 20px;
   transition: transform 0.3s ease-in-out;
 }
@@ -38,14 +37,15 @@
 
 .product-image {
   width: 100%;
-  height: auto;
+  height: 50%;
   border-radius: 8px;
-  margin-bottom: 20px;
 }
 
 .product-card h3 {
   font-size: 24px;
   color: #333;
+  height: 4.9rem;
+  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -57,32 +57,43 @@
 
 .product-link {
   text-decoration: none;
-  background-color:#01a74d;
+  background-color: #01a74d;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   margin-top: 10px;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .product-link:hover {
-  background-color:#004D9B;
+  background-color: #004D9B;
 }
 
+/* Responsive Styles */
 @media (max-width: 767px) {
   .product-card {
     width: 100%;
+  }
+
+  .product-list {
+    gap: 20px; /* Reduce gap for small screens */
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .product-card {
-    width: 48%;
+    width: calc(50% - 20px); /* Account for gap */
   }
 }
 
 @media (min-width: 992px) {
   .product-card {
-    width: 30%;
+    width: calc(33.33% - 20px); /* Dynamic 3-column layout */
+  }
+
+  .product-list {
+    gap: 30px; /* Restore larger gap */
+    margin: 0 60px; /* Add spacing for desktop */
   }
 }

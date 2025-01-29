@@ -14,7 +14,7 @@ const ProductList = () => {
       link: "/react-website/relay-card"
     },
     {
-      name: "Industrial Panel Manufacturer (PCC, MCC, VFD, PLC)",
+      name: "Industrial Panel (PCC, MCC, VFD, PLC)",
       image: "https://5.imimg.com/data5/KF/SE/DJ/SELLER-79625611/mcc-pcc-vfd-plc-panels-500x500.JPG",
       link: "/react-website/industrial-panel-manufacturer"
     }
