@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -10,7 +11,6 @@ const Footer = () => {
             <h4>SAV-Tech Associate</h4>
             <p>Innovative solutions for Sugar, Power Plant, Co-Generation, Distillery, Khandsar & Jaggery industries.</p>
             <div className="footer-contact">
-              {/* <p><strong>Specialisation:</strong> Turnkey Boiling House, Sugar Industries, Jaggery Plant, Material Handling Equipment, Over Head Cranes up to 100 MT</p> */}
               <p><strong>Phone:</strong> 9422225058, 9011731731, 9822760005</p>
               <p><strong>Email:</strong> info@nrfabricator.com</p>
               <p><strong>Address:</strong> G-58, M.I.D.C, Ahmednagar, Maharashtra - 414111</p>
@@ -20,21 +20,19 @@ const Footer = () => {
           <div className="footer-right">
             <h4>Navigation</h4>
             <ul>
-              <li><a href="/react-website/home">Home</a></li>
-              <li><a href="/react-website/aboutus">About</a></li>
-              <li><a href="/react-website/services">Services</a></li>
-              <li><a href="/react-website/contactpage">Contact</a></li>
-
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/aboutus">About</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/contactpage">Contact</Link></li>
             </ul>
           </div>
 
           <div className="footer-right">
             <h4>Projects</h4>
             <ul>
-              <li><a href="/react-website/manufacturing">Manufacturing of Machineries</a></li>
-              <li><a href="/react-website/relay-card">RelayCard</a></li>
-              <li><a href="/react-website/industrial-panel-manufacturer">Industrial Panel Manufacturing</a></li>
-
+              <li><Link to="/manufacturing">Manufacturing of Machineries</Link></li>
+              <li><Link to="/relay-card">RelayCard</Link></li>
+              <li><Link to="/industrial-panel-manufacturer">Industrial Panel Manufacturing</Link></li>
             </ul>
             {/* Social Media Links Section */}
             <div className="footer-social">
@@ -60,7 +58,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer >
+    </footer>
   );
 };
 
