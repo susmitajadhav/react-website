@@ -1,6 +1,6 @@
 //app.jsx
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import ProductList from './components/ProductList';
 import AboutUs from './components/AboutUs';
@@ -50,7 +50,7 @@ const Home = () => {
 
 const App = () => {
   return (
-    <Router basename="/react-website"> {/* Add basename */}
+    <Router> {/* Add basename */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/header" element={<Header />} />

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Product.css";
+import "./Services.css";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -24,7 +24,7 @@ const Services = () => {
    <div>
     <Header/>
     <div className="projects-page">
-      <h1>Our Projects</h1>
+      <h1>Our Services</h1>
       <p>Explore our range of projects</p>
       <div className="projects-grid">
         {projects.map((project, index) => (

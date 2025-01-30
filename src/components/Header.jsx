@@ -4,17 +4,16 @@ import './Header.css';
 import logo from '../assets/logo.jpeg';
 
 const Header = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
 
-  // Toggles the dropdown visibility
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  // Function to toggle the side menu
+  const toggleSideMenu = () => {
+    setIsSideMenuOpen(!isSideMenuOpen);
   };
 
-  // Toggles the mobile menu visibility
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  // Function to close the menu
+  const closeMenu = () => {
+    setIsSideMenuOpen(false);
   };
 
   return (
@@ -26,72 +25,33 @@ const Header = () => {
             <img src={logo} alt="SAV-Tech Associate Logo" />
           </Link>
         </div>
+      </div>
 
-        {/* Hamburger Menu for Mobile */}
-        <div className="hamburger-menu" onClick={toggleMenu}>
-          <div className={`line ${isMenuOpen ? 'open' : ''}`}></div>
-          <div className={`line ${isMenuOpen ? 'open' : ''}`}></div>
-          <div className={`line ${isMenuOpen ? 'open' : ''}`}></div>
-        </div>
+      {/* Navigation Section */}
+      <nav className="nav">
+        <ul className="nav-links">
+          <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+          <li><Link to="/aboutus" onClick={closeMenu}>About</Link></li>
+          <li><Link to="/services" onClick={closeMenu}>Services</Link></li>
+          <li><Link to="/product" onClick={closeMenu}>Product</Link></li>
+          <li><Link to="/gallery" onClick={closeMenu}>Gallery</Link></li>
+          <li><Link to="/contactpage" onClick={closeMenu}>Contact</Link></li>
+          <li><Link to="/getquote" className="get-quote-btn">Get Quote</Link></li>
+        </ul>
+        <button className="show-all-btn" onClick={toggleSideMenu}>Show All</button>
+      </nav>
 
-        {/* Navigation Section */}
-        <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-          <ul>
-            <li>
-              <Link to="/" onClick={() => setIsMenuOpen(false)}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/aboutus" onClick={() => setIsMenuOpen(false)}>
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>
-                Gallery
-              </Link>
-            </li>
-            <li className="dropdown">
-              <a
-                href="#!"
-                className="dropdown-toggle"
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleDropdown();
-                }}
-              >
-                What We Do
-              </a>
-              {isDropdownOpen && (
-                <div className="dropdown-menu">
-                  <div className="dropdown-item">
-                    <Link to="/services" onClick={() => setIsMenuOpen(false)}>
-                      Services
-                    </Link>
-                  </div>
-                  <div className="dropdown-item">
-                    <Link to="/productlist" onClick={() => setIsMenuOpen(false)}>
-                      Product
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </li>
-            <li>
-              <Link to="/contactpage" onClick={() => setIsMenuOpen(false)}>
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Get Quote Button */}
-        <div className="quote-button">
-          <Link to="/getquote" className="get-quote-btn">
-            Get Quote
-          </Link>
-        </div>
+      {/* Side Menu */}
+      <div className={`side-menu ${isSideMenuOpen ? 'open' : ''}`}>
+        <ul className="side-menu-links">
+          <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+          <li><Link to="/aboutus" onClick={closeMenu}>About</Link></li>
+          <li><Link to="/services" onClick={closeMenu}>Services</Link></li>
+          <li><Link to="/product" onClick={closeMenu}>Product</Link></li>
+          <li><Link to="/gallery" onClick={closeMenu}>Gallery</Link></li>
+          <li><Link to="/contactpage" onClick={closeMenu}>Contact</Link></li>
+          <li><Link to="/getquote" className="get-quote-btn">Get Quote</Link></li>
+        </ul>
       </div>
     </header>
   );

@@ -20,19 +20,47 @@ const Footer = () => {
           <div className="footer-right">
             <h4>Navigation</h4>
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/aboutus">About</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/contactpage">Contact</Link></li>
+            <li>
+              <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/aboutus" onClick={() => setIsMenuOpen(false)}>
+              About
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" onClick={() => setIsMenuOpen(false)}>
+              Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/contactpage" onClick={() => setIsMenuOpen(false)}>
+                Contact
+              </Link>
+            </li>
             </ul>
           </div>
 
           <div className="footer-right">
             <h4>Projects</h4>
             <ul>
-              <li><Link to="/manufacturing">Manufacturing of Machineries</Link></li>
-              <li><Link to="/relay-card">RelayCard</Link></li>
-              <li><Link to="/industrial-panel-manufacturer">Industrial Panel Manufacturing</Link></li>
+            <li>
+              <Link to="/manufacturing" onClick={() => setIsMenuOpen(false)}>
+              Manufacturing of Machineries
+              </Link>
+            </li>
+            <li>
+              <Link to="/relay-card" onClick={() => setIsMenuOpen(false)}>
+                RelayCardact
+              </Link>
+            </li>
+            <li>
+              <Link to="/industrial-panel-manufacturer" onClick={() => setIsMenuOpen(false)}>
+              Industrial Panel Manufacturing
+              </Link>
+            </li>
             </ul>
             {/* Social Media Links Section */}
             <div className="footer-social">

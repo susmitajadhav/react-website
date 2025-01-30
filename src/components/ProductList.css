@@ -19,7 +19,7 @@
   gap: 30px;
   justify-content: center; /* Center align for all views */
   margin: 0 auto; /* Center the section */
-  padding: 0 10px; /* Add padding for smaller screens */
+  padding: 0 90px; /* Add padding for smaller screens */
 }
 
 .product-card {
@@ -28,6 +28,8 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   padding: 20px;
+  height: 19rem;
+  /* width: 20rem; */
   transition: transform 0.3s ease-in-out;
 }
 
@@ -44,15 +46,15 @@
 .product-card h3 {
   font-size: 24px;
   color: #333;
-  height: 4.9rem;
+  height: 4rem;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .product-card p {
   font-size: 16px;
   color: #666;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .product-link {
