@@ -6,17 +6,17 @@ const ProductList = () => {
     {
       name: "Machinery Manufacturer",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s",
-      link: "/react-website/manufacturing"
+      link: "/manufacturing"
     },
     {
       name: "Relay Card",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDEtSZzcR4It0FBfOAf8XYmN2ZHF8I0wwsfw&s",
-      link: "/react-website/relay-card"
+      link: "/relay-card"
     },
     {
       name: "Industrial Panel (PCC, MCC, VFD, PLC)",
       image: "https://5.imimg.com/data5/KF/SE/DJ/SELLER-79625611/mcc-pcc-vfd-plc-panels-500x500.JPG",
-      link: "/react-website/industrial-panel-manufacturer"
+      link: "/industrial-panel-manufacturer"
     }
   ];
 
