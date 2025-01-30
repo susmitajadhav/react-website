@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import './ProductList.css'; // Import the CSS file for styling
 
 const ProductList = () => {
@@ -28,8 +29,7 @@ const ProductList = () => {
           <div key={index} className="product-card">
             <img src={product.image} alt={product.name} className="product-image" />
             <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <a href={product.link} className="product-link">Learn More</a>
+            <Link to={product.link} className="product-link">Learn More</Link>
           </div>
         ))}
       </div>
