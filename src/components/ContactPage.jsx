@@ -46,16 +46,19 @@ const ContactPage = () => {
           <div className="contact-page__info" data-aos="fade-right">
             <h2>Our Contact Details</h2>
             <ul>
-              <li><strong>Phone:</strong> 9422225058, 9011731731, 9822760005</li>
+              <li><strong>Contact Us:</strong> 9422225058, 9011731731, 9822760005</li>
               <li><strong>Directors:</strong></li>
               <ul>
                 <li><strong>1) Mr. Sudhirr Paatil </strong></li>
                 <li><strong>2) Mr. Vikas Patil </strong></li>
                 <li><strong>3) Mr. Amarsinh Patil </strong></li>
               </ul>
-              <li><strong>Email:</strong> info@nrfabricator.com / nrdewoo@rediffmail.com</li>
-              <li><strong>Working Hours:</strong> Sun to Fri, 9:00am to 7:00pm</li>
-              <li><strong>Office:</strong> G-58, M.I.D.C, Ahmednagar, Maharashtra - 414111</li>
+              <li><strong>Email:</strong></li>
+              <li>info@nrfabricator.com / nrdewoo@rediffmail.com</li>
+              <li><strong>Working Hours:</strong> </li>
+              <li> Sun to Fri, 9:00am to 7:00pm</li>
+              <li><strong>Office:</strong></li>
+              <li>G-58, M.I.D.C, Ahmednagar, Maharashtra - 414111</li>
             </ul>
           </div>
 
