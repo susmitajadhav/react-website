@@ -6,7 +6,7 @@ import ProductList from './components/ProductList';
 import AboutUs from './components/AboutUs';
 // import Vision from './components/Vision';
 // import Mission from './components/Mission';
-// import Product from './components/Product';
+ import Product from './components/Product';
 import Footer from './components/Footer';
 import InfoPage from './components/InfoPage';
 import ContactPage from './components/ContactPage';
@@ -55,7 +55,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/header" element={<Header />} />
         <Route path="/Herosection" element={<HeroSection />} />
-        {/* <Route path="/product" element={<Product />} /> */}
+        /* <Route path="/product" element={<Product />} /> */
         <Route path="/aboutus" element={<AboutUs />} />
         {/* <Route path="/vision" element={<Vision />} /> */}
         {/* <Route path="/mission" element={<Mission />} /> */}
