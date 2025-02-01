@@ -38,7 +38,7 @@ const Header = () => {
           <li><Link to="/contactpage" onClick={closeMenu}>Contact</Link></li>
           <li><Link to="/getquote" className="get-quote-btn">Get Quote</Link></li>
         </ul>
-        <button className="show-all-btn" onClick={toggleSideMenu}></button>
+        <button className="show-all-btn" onClick={toggleSideMenu}>Menu</button>
       </nav>
 
       {/* Side Menu */}
