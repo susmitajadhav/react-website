@@ -23,7 +23,7 @@ const HeroSection = () => {
       <div className="hero-content">
         <h1 className="hero-title">Welcome to My Awesome Website!</h1>
         <p className="hero-description">
-          We provide innovative solutions to take your business to the next level.
+        Technology Innovation for Client Growth is our Growth.
         </p>
         <Link to="/react-website/servicespage" className="cta-button">
           Explore Our Services
