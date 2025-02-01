@@ -21,7 +21,7 @@ const HeroSection = () => {
     <section className="hero-section">
       <div className="hero-overlay"></div>
       <div className="hero-content">
-        <h1 className="hero-title">Welcome to SAVTECH Website!</h1>
+        <h1 className="hero-title">Welcome to SAVTECH!</h1>
         <p className="hero-description">
         Technology Innovation for Client Growth is our Growth.
         </p>
