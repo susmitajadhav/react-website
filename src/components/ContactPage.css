@@ -195,6 +195,10 @@
     margin-bottom: 20px;
   }
 
+  .contact-page__info ul {
+    padding-left: 15px;
+  }
+
   .contact-page__info h2,
   .contact-page__form-container h2 {
     font-size: 1.2rem;
