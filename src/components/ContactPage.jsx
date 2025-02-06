@@ -34,15 +34,15 @@ const CustomContactPage = React.memo(() => {
       setLoading(true);
       emailjs
         .send(
-          "your_service_id",
-          "your_template_id",
+          "service_hsx6zkv",
+          "template_a7twor8",
           {
             from_name: `${formData.userFirstName} ${formData.userLastName}`,
             from_email: formData.userEmail,
             phone: formData.userPhone,
             message: formData.userMessage,
           },
-          "your_user_id"
+          "0qB6fuI7GqVF0dC8I"
         )
         .then(
           () => {
