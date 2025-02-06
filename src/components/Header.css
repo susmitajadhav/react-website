@@ -12,7 +12,7 @@
 }
 
 .logo img {
-  width: 160px;  /* Adjust based on your design */
+  width: 180px;  /* Adjust based on your design */
   height: auto;  /* Maintain aspect ratio */
   object-fit: contain;
   border-radius: 10px;  /* Optional rounded corners */
@@ -38,14 +38,14 @@
 }
 
 .custom-get-quote-btn {
-  padding: 12px 24px; /* Adjust padding to match menu height */
+  padding: 12px 30px; /* Adjust padding to match menu height */
   font-size: 16px;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 15px;
   display: flex; /* Ensures proper height alignment */
   align-items: center;
   height: 100%; /* Takes full nav height */
-  background: #004D9B; /* Deep blue */
+  background: #1f62a5; /* Deep blue */
 }
 
 
@@ -73,10 +73,12 @@
   color: white;
   padding: 8px 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   margin-left: 1rem;
   font-weight: bold;
+  border-radius: 10px;
+ 
 }
 
 .show-all-btn:hover {
@@ -178,6 +180,7 @@
   
   .show-all-btn {
     display: block;
+    font-size: 20px;
   }
 }
 
