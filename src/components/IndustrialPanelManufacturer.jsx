@@ -1,4 +1,4 @@
-// src/components/IndustrialPanelManufacturer.js
+// src/components/IndustrialPanelManufacturer.jsx
 
 import React from 'react';
 import './IndustrialPanelManufacturer.css'; // Import the custom CSS file

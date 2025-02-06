@@ -1,4 +1,4 @@
-/* Global Styles */
+/* General Styling */
 .product-section {
   padding: 60px 20px;
   font-family: "Poppins", sans-serif;
@@ -6,7 +6,7 @@
 }
 
 .product-section h2 {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 40px;
@@ -15,7 +15,7 @@
 
 .product-list {
   display: flex;
-  /* flex-wrap: wrap; Allow wrapping for responsiveness */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
   gap: 30px;
   justify-content: center; /* Center align for all views */
   margin: 0 auto; /* Center the section */
@@ -28,9 +28,14 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   padding: 20px;
-  height: 19rem;
-  /* width: 20rem; */
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(33.33% - 20px); /* Default 3-column layout */
+  max-width: 300px; /* Ensure consistent card size */
+  height: 100%;
 }
 
 .product-card:hover {
@@ -39,22 +44,16 @@
 
 .product-image {
   width: 100%;
-  height: 50%;
+  height: 200px; /* Increased height for the image */
+  object-fit: cover; /* Maintain aspect ratio and cover the space */
   border-radius: 8px;
 }
 
 .product-card h3 {
   font-size: 24px;
   color: #333;
+  margin: 1rem 0;
   height: 4rem;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.product-card p {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.5;
 }
 
 .product-link {
@@ -75,27 +74,40 @@
 /* Responsive Styles */
 @media (max-width: 767px) {
   .product-card {
-    width: 100%;
+    width: 100%; /* Full width on small screens */
+    max-width: 100%;
   }
 
   .product-list {
     gap: 20px; /* Reduce gap for small screens */
+    padding: 0 20px; /* Add padding for smaller screens */
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .product-card {
-    width: calc(50% - 20px); /* Account for gap */
+    width: calc(50% - 20px); /* Two-column layout for tablets */
+  }
+
+  .product-list {
+    gap: 30px;
+    padding: 0 40px; /* Add padding for tablet screens */
   }
 }
 
 @media (min-width: 992px) {
   .product-card {
-    width: calc(33.33% - 20px); /* Dynamic 3-column layout */
+    width: calc(33.33% - 20px); /* Default 3-column layout for desktop */
   }
 
   .product-list {
-    gap: 30px; /* Restore larger gap */
-    margin: 0 60px; /* Add spacing for desktop */
+    gap: 30px;
+    padding: 0 60px; /* Add spacing for desktop */
   }
+}
+
+/* Additional Hover Effects */
+.product-card:hover .product-image {
+  transform: scale(1.05); /* Slight zoom on image hover */
+  transition: transform 0.3s ease-in-out;
 }

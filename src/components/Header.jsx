@@ -36,7 +36,7 @@ const Header = () => {
           <li><Link to="/product" onClick={closeMenu}>Product</Link></li>
           <li><Link to="/gallery" onClick={closeMenu}>Gallery</Link></li>
           <li><Link to="/contactpage" onClick={closeMenu}>Contact</Link></li>
-          <li><Link to="/getquote" className="get-quote-btn">Get Quote</Link></li>
+          <li> <Link to="/getquote" className="custom-get-quote-btn">Get Quote </Link></li>
         </ul>
         <button className="show-all-btn" onClick={toggleSideMenu}>Menu</button>
       </nav>

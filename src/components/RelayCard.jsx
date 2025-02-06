@@ -1,4 +1,4 @@
-// src/components/RelayCard.js
+// src/components/RelayCard.jsx
 
 import React from 'react';
 import './RelayCard.css'; // Import the custom CSS file

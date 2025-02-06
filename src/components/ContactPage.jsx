@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import "./ContactPage.css";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -11,6 +12,7 @@ const CustomContactPage = () => {
     userPhone: "",
     userMessage: "",
   });
+  const [statusMessage, setStatusMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,8 +21,29 @@ const CustomContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Thank you, ${formData.userFirstName}! Your message has been submitted.`);
-    setFormData({ userFirstName: "", userLastName: "", userEmail: "", userPhone: "", userMessage: "" });
+    emailjs
+      .send(
+        "your_service_id", // Replace with your EmailJS Service ID
+        "your_template_id", // Replace with your EmailJS Template ID
+        {
+          from_name: `${formData.userFirstName} ${formData.userLastName}`,
+          from_email: formData.userEmail,
+          phone: formData.userPhone,
+          message: formData.userMessage,
+        },
+        "your_user_id" // Replace with your EmailJS User ID
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setStatusMessage("Your message has been sent successfully!");
+          setFormData({ userFirstName: "", userLastName: "", userEmail: "", userPhone: "", userMessage: "" });
+        },
+        (err) => {
+          console.log("FAILED...", err);
+          setStatusMessage("Something went wrong. Please try again.");
+        }
+      );
   };
 
   useEffect(() => {
@@ -39,11 +62,14 @@ const CustomContactPage = () => {
         <div className="custom-contact-content">
           <div className="custom-contact-details" data-aos="fade-right">
             <h2>Our Contact Details</h2>
-            <ul>
-              <li><strong>Phone:</strong> 9422225058, 9011731731, 9822760005</li>
-              <li><strong>Email:</strong> info@nrfabricator.com</li>
-              <li><strong>Office:</strong> G-58, M.I.D.C, Ahmednagar, Maharashtra - 414111</li>
-            </ul>
+            <div className="contact-card">
+              <ul>
+                <li><i className="fas fa-phone-alt"></i> <strong>Phone:</strong> 9422225058, 9011731731, 9822760005</li>
+                <li><i className="fas fa-envelope"></i> <strong>Email:</strong> info@nrfabricator.com</li>
+                <li><i className="fas fa-map-marker-alt"></i> <strong>Office:</strong> G-58, M.I.D.C, Ahmednagar, Maharashtra - 414111</li>
+                <li><i className="fas fa-clock"></i> <strong>Working Hours:</strong> Mon - Sat: 9:00 AM - 6:00 PM</li>
+              </ul>
+            </div>
           </div>
 
           <div className="custom-contact-form-wrapper" data-aos="fade-left">
@@ -59,6 +85,7 @@ const CustomContactPage = () => {
               </div>
               <textarea name="userMessage" value={formData.userMessage} onChange={handleChange} placeholder="Message" required />
               <button type="submit" className="custom-submit-btn">Submit</button>
+              {statusMessage && <p className="status-message">{statusMessage}</p>}
             </form>
           </div>
         </div>
@@ -67,7 +94,7 @@ const CustomContactPage = () => {
           <h2>Visit Our Office</h2>
           <iframe
             title="Office Location"
-            src="https://www.google.com/maps/embed?pb=..."
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60583.05142847984!2d74.7201486!3d19.0948288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc7fe70c47a257%3A0x7f6e10d67c9e6357!2sG-58%2C%20M.I.D.C%2C%20Ahmednagar%2C%20Maharashtra%20414111!5e0!3m2!1sen!2sin!4v1646372164539!5m2!1sen!2sin"
             width="100%"
             height="450"
             style={{ border: 0 }}

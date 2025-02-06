@@ -1,3 +1,4 @@
+//WhatWeOffer.jsx
 import React from 'react';
 import './WhatWeOffer.css'; // Link to the updated CSS file
 

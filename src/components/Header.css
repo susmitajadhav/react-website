@@ -44,14 +44,23 @@
   color: #00bcd4;
 }
 
-.get-quote-btn {
-  padding: 10px 20px;
-  /* background-color:  #333; */
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
+.custom-get-quote-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 18px;
   font-weight: bold;
-  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  background: #004D9B; /* Deep blue */
+  border: 2px solid #004D9B;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.custom-get-quote-btn:hover {
+  background: white;
+  color: #004D9B;
+  border: 2px solid #004D9B;
 }
 
 

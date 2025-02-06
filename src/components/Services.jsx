@@ -1,45 +1,52 @@
-import React from "react";
-import "./Services.css";
-import Header from "./Header";
-import Footer from "./Footer";
-
-const projects = [
-  { name: "Project 1", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s" },
-  { name: "Project 2", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s" },
-  { name: "Project 3", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s" },
-  { name: "Project 4", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s" },
-  { name: "Project 5", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s" },
-  { name: "Project 6", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s" },
-  { name: "Project 7", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s" },
-  { name: "Project 8", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s" },
-  { name: "Project 1", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s" },
-  { name: "Project 2", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s" },
-  { name: "Project 3", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s" },
-  { name: "Project 3", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ2CqRA0EzZcOVFCmEfo31ODSfhiU2OChrbw&s" },
-
-];
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import './Services.css';
+import Footer from './Footer';
+import Header from './Header';
 
 const Services = () => {
+  const services = [
+    {
+      title: 'Consultancy Services',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFizBIE_eGqs2C2JL6DvXkvEKUDPQAvOEr1g&s',
+      link: "/consultancyservices"
+    },
+    {
+      title: 'Mechanical Engineering Services',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUBkbETGBOr5-vnTTi9th3MP-hlQUbu2aOxg&s',
+      link: "/mechanicalengineering"
+    },
+    {
+      title: 'Electrical & Instrumentation Services',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTte8ZOtfehxf9J4Lr7h60LtKt61xInSzM12g&s',
+      link: "/electrical"
+    },
+    {
+      title: 'O & M Services',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS059frnmzmI_KVvyU3GfNKC09N_JzAH79Obg&s',
+      link: "/om",
+    }
+  ];
+
   return (
-   <div>
-    <Header/>
-    <div className="projects-page">
-      <h1>Our Services</h1>
-      <p>Explore our range of projects</p>
-      <div className="projects-grid">
-        {projects.map((project, index) => (
-          <div key={index} className="project-item">
-            <div className="project-box">
-              <img src={project.image} alt={project.name} className="project-image" />
-              <div className="overlay">
-                <p>{project.name}</p>
+    <div>
+      <Header />
+    <div className="services-container">
+      <h1 className="page-title">Our Services</h1>
+      <div className="service-cards-container">
+        {services.map((service, index) => (
+          <Link to={service.link} className="service-item" key={index}>  {/* Wrap service item with Link */}
+            <div className="service-card">
+              <img src={service.image} alt={service.title} className="service-image" />
+              <div className="service-content">
+                <h2 className="service-title">{service.title}</h2>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-      </div>
-      <Footer/>
+    </div>
+    <Footer />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-/* Gallery Page Styles */
+/* Gallery.css */
 .gallery-container {
   padding: 40px 20px;
   text-align: center;
@@ -6,9 +6,26 @@
 }
 
 .gallery-title {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 30px;
-  color: #333;
+  color: #000000;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  animation: titleAnimation 3s ease-in-out infinite; /* Animation effect */
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: scale(1);
+    letter-spacing: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    letter-spacing: 2px;
+  }
+  100% {
+    transform: scale(1);
+    letter-spacing: 0;
+  }
 }
 
 .gallery-grid {
@@ -38,5 +55,9 @@
 @media (max-width: 768px) {
   .gallery-title {
     font-size: 2rem;
+    background: none;
+    color: #333;
+    text-shadow: none; /* Remove shadow on smaller screens */
+    animation: none; /* Remove animation on smaller screens */
   }
 }

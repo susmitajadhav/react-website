@@ -1,4 +1,4 @@
-// src/components/MachineryManufacturer.js
+// src/components/MachineryManufacturer.jsx
 import React from 'react';
 import './Manufacturing.css'; // Import the custom CSS file
 import Header from './Header';

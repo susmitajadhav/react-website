@@ -1,3 +1,4 @@
+//HeroSection.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
