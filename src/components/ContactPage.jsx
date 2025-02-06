@@ -1,8 +1,11 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, lazy, Suspense } from "react";
 import emailjs from "@emailjs/browser";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./ContactPage.css";
-import Footer from "./Footer";
-import Header from "./Header";
+
+const Footer = lazy(() => import("./Footer"));
+const Header = lazy(() => import("./Header"));
 
 const CustomContactPage = React.memo(() => {
   const [formData, setFormData] = useState({
@@ -13,7 +16,12 @@ const CustomContactPage = React.memo(() => {
     userMessage: "",
   });
   const [statusMessage, setStatusMessage] = useState("");
-  const [loading, setLoading] = useState(false); // Add loading state
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleChange = useCallback((e) => {
     const { name, value } = e.target;
@@ -23,7 +31,7 @@ const CustomContactPage = React.memo(() => {
   const handleSubmit = useCallback(
     (e) => {
       e.preventDefault();
-      setLoading(true); // Set loading state
+      setLoading(true);
       emailjs
         .send(
           "your_service_id",
@@ -37,28 +45,27 @@ const CustomContactPage = React.memo(() => {
           "your_user_id"
         )
         .then(
-          (response) => {
+          () => {
             setStatusMessage("Your message has been sent successfully!");
             setFormData({ userFirstName: "", userLastName: "", userEmail: "", userPhone: "", userMessage: "" });
           },
-          (err) => {
+          () => {
             setStatusMessage("Something went wrong. Please try again.");
           }
         )
         .finally(() => {
-          setLoading(false); // Reset loading state
+          setLoading(false);
         });
     },
     [formData]
   );
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <div>
-      <Header />
+      <Suspense fallback={<div>Loading Header...</div>}>
+        <Header />
+      </Suspense>
+
       <div className="custom-contact-container">
         <header className="custom-contact-header">
           <h1>Contact Us</h1>
@@ -112,7 +119,10 @@ const CustomContactPage = React.memo(() => {
           ></iframe>
         </div>
       </div>
-      <Footer />
+
+      <Suspense fallback={<div>Loading Footer...</div>}>
+        <Footer />
+      </Suspense>
     </div>
   );
 });
