@@ -175,8 +175,13 @@
     font-size: 20px;
   }
 
-  .info-details p,
-  .info-details li {
+  .info-details p
+   {
     font-size: 14px;
+  }
+
+  .info-details li{
+    font-size: 35px!important;
+   
   }
 }
