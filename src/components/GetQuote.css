@@ -1,8 +1,17 @@
-/* GetQuote.css*/
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  flex: 1;
+}
+
 .get-quote-page {
   max-width: 600px;
   margin: 50px auto;
-  font-family:"Poppins",sans-serif;
+  font-family: "Poppins", sans-serif;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -10,10 +19,12 @@
 }
 
 .quote-title {
+  font-size: 40px;
+  font-weight: bold;
   text-align: center;
-  font-size: 32px;
-  color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  color: #00a84d; /* Converted to lowercase */
+  text-shadow: 3px 3px 6px rgba(180, 175, 175, 0.3); /* Adds a smooth shadow */
 }
 
 .quote-description {
@@ -67,4 +78,11 @@
 
 .submit-button:hover {
   background-color: #004d9b;
+}
+
+.status-message {
+  text-align: center;
+  font-size: 16px;
+  color: green;
+  margin-top: 20px;
 }
