@@ -1,8 +1,7 @@
-//OM.jsx
 import React from "react";
 import "./MechanicalEngineering.css";
-import Header from './Header';
-import Footer from './Footer';
+import Header from "./Header";
+import Footer from "./Footer";
 
 const OM = () => {
   return (
@@ -10,14 +9,15 @@ const OM = () => {
       <Header />
       <div className="containers">
         {/* Image Section */}
-        <div className="image-container">
+        <div className="image-container animate-slide-in">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS059frnmzmI_KVvyU3GfNKC09N_JzAH79Obg&s"
             className="image"
+            alt="O&M Services"
           />
         </div>
         {/* Information Section */}
-        <div className="info-container">
+        <div className="info-container animate-fade-in">
           <h1 className="title">O & M Services</h1>
           <p className="description">
             We provide comprehensive Operation & Maintenance (O&M) services for the following plants:

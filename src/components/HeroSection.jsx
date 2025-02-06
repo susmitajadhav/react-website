@@ -19,6 +19,7 @@ const HeroSection = () => {
   };
 
   return (
+    
     <section className="hero-section">
       <div className="hero-overlay"></div>
       <div className="hero-content">
@@ -26,7 +27,7 @@ const HeroSection = () => {
         <p className="hero-description">
         Technology Innovation for Client Growth is our Growth.
         </p>
-        <Link to="/react-website/servicespage" className="cta-button">
+        <Link to="/services" className="cta-button">
           Explore Our Services
         </Link>
       </div>
@@ -57,6 +58,7 @@ const HeroSection = () => {
         </Slider>
       </div>
     </section>
+ 
   );
 };
 

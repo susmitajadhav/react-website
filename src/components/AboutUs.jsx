@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import "./AboutUs.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Header from './Header';
+import Footer from './Footer';
 import { FaCogs, FaRocket, FaUsers, FaGlobe, FaLightbulb, FaHandshake } from "react-icons/fa";
 
 const AboutUs = () => {
@@ -10,6 +12,8 @@ const AboutUs = () => {
   }, []);
 
   return (
+    <div>
+      <Header />
     <div className="about-us-container">
       {/* About Us Section */}
       <section className="section about" data-aos="fade-up">
@@ -77,6 +81,8 @@ const AboutUs = () => {
           <li>✅ Trusted by Businesses Worldwide</li>
         </ul>
       </section>
+    </div>
+    <Footer />
     </div>
   );
 };

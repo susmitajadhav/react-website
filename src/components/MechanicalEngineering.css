@@ -1,4 +1,5 @@
-/* MechanicalEngineering.jsx*/
+/* MechanicalEngineering.css */
+
 .containers {
   display: flex; /* Default flex layout for laptops and larger screens */
   flex-direction: row;
@@ -14,13 +15,12 @@
   flex: 1;
   text-align: center;
   max-width: 100%;
-  /* width: 50%; */
 }
 
 .image {
   width: 100%;
-  max-width: 500px; /* Limits image width */
-  height: 15rem;
+  max-width: 600px; /* Increased image size */
+  height: 20rem; /* Increased height */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -36,32 +36,66 @@
 }
 
 .title {
-  font-size: 1.8rem;
+  font-size: 2rem; /* Adjusted font size */
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
+  text-align: center; /* Centered the title */
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
   margin-bottom: 15px;
+  text-align: justify;
 }
 
 .list {
   font-size: 1rem;
   color: #555;
-  list-style-type: disc;
+  list-style-type: none; /* Removed default bullets */
   padding-left: 20px;
   margin-bottom: 15px;
+  animation: fadeIn 0.5s ease-in-out; /* Add animation */
+}
+
+.list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.list li::before {
+  content: "\2022"; /* Unicode for bullet point */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #007bff; /* Blue color for bullet points */
+  font-size: 1.5rem;
+  animation: bounce 0.8s infinite alternate; /* Add bounce animation */
 }
 
 .sub-list {
   font-size: 1rem;
   color: #555;
-  list-style-type: circle;
+  list-style-type: none;
   padding-left: 20px;
   margin-bottom: 10px;
+}
+
+.sub-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+.sub-list li::before {
+  content: "\25E6"; /* Unicode for circle bullet */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #28a745; /* Green color for sub-list bullet points */
+  font-size: 1.2rem;
 }
 
 .additional-info {
@@ -69,90 +103,89 @@
   color: #333;
   font-style: italic;
   margin-top: 10px;
+  text-align: justify;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
 }
 
 /* Responsive Design */
 
-/* For tablets and smaller screens (no display: flex) */
+/* For tablets and smaller screens */
 @media (max-width: 1024px) {
   .containers {
-    display: block; /* Stacks elements vertically */
-    padding: 15px;
+    flex-direction: column; /* Stack elements vertically */
+    padding: 30px 15px;
   }
 
   .image-container {
-    width: 100%; /* Full width of the container */
-    text-align: center; /* Centers the image */
-    margin-bottom: 10px; /* Adds spacing below the image */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   .image {
-    width: 80%; /* Makes the image responsive */
-    max-width: 100%; /* Removes any restriction for smaller screens */
+    width: 90%;
     height: auto;
-    border-radius: 5px; /* Subtle rounding for aesthetics */
+    border-radius: 5px;
   }
 
   .info-container {
-    width: 100%; /* Full width of the container */
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-sizing: border-box; /* Ensures padding doesn't exceed width */
-    margin-top: 10px; /* Adds spacing above the info container */
+    width: 100%;
+    padding: 20px;
   }
 
   .title {
-    font-size: 1.5rem; /* Adjusted font size */
-    text-align: center; /* Centers the title */
+    font-size: 2rem; /* Adjusted for smaller screens */
   }
 
   .description,
   .list,
   .sub-list,
   .additional-info {
-    font-size: 0.95rem; /* Adjusted text size for smaller screens */
-    text-align: justify; /* Makes text easier to read */
-    margin-bottom: 10px; /* Adds spacing */
-  }
-
-  .list {
-    padding-left: 20px; /* Proper indentation for lists */
-  }
-
-  .sub-list {
-    padding-left: 15px; /* Slightly reduced indentation for sub-lists */
+    font-size: 0.8rem;
   }
 }
 
 /* For mobile devices */
 @media (max-width: 480px) {
   .containers {
-    display: block; /* Ensures block layout for stacking */
-    padding: 10px;
-  }
-
-  .image-container {
-    margin-bottom: 10px; /* Adds spacing below the image */
+    padding: 15px 10px;
   }
 
   .image {
     width: 100%;
+    max-width: 100%;
     height: auto;
   }
 
-  .info-container {
-    margin-top: 10px;
-  }
-
   .title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .description,
   .list,
   .sub-list,
   .additional-info {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
+

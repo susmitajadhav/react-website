@@ -25,6 +25,7 @@
 
 .nav-links {
   display: flex;
+  align-items: center; /* Ensures vertical alignment */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -32,7 +33,21 @@
 
 .nav-links li {
   margin-left: 1.5rem;
+  display: flex;
+  align-items: center; /* Keeps items in line */
 }
+
+.custom-get-quote-btn {
+  padding: 12px 24px; /* Adjust padding to match menu height */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex; /* Ensures proper height alignment */
+  align-items: center;
+  height: 100%; /* Takes full nav height */
+  background: #004D9B; /* Deep blue */
+}
+
 
 .nav-links a {
   text-decoration: none;
@@ -41,21 +56,10 @@
 }
 
 .nav-links a:hover {
-  color: #00bcd4;
+  color: #00A84D;
 }
 
-.custom-get-quote-btn {
-  display: inline-block;
-  padding: 12px 25px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  background: #004D9B; /* Deep blue */
-  border: 2px solid #004D9B;
-  transition: background 0.3s ease, color 0.3s ease;
-}
+
 
 .custom-get-quote-btn:hover {
   background: white;
@@ -160,6 +164,7 @@
 
   .show-all-btn {
     display: block;
+    padding: 16px 32px;
   }
 
   .side-menu {
@@ -195,6 +200,11 @@
 
   .show-all-btn {
     display: none; /* Hide the "Show All" button on desktop */
+  }
+
+  .nav-links a {
+    font-size: 18px; /* Increase font size */
+    padding: 0.8rem 1rem; /* Adjust padding for better spacing */
   }
 
   .side-menu {

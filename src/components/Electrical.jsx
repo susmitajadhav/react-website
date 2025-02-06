@@ -1,8 +1,7 @@
-//Electrical.jsx
 import React from "react";
-import "./MechanicalEngineering.css";
-import Header from './Header';
-import Footer from './Footer';
+import "./Manufacturing.css";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Electrical = () => {
   return (
@@ -14,6 +13,7 @@ const Electrical = () => {
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTte8ZOtfehxf9J4Lr7h60LtKt61xInSzM12g&s"
             className="image"
+            alt="Electrical Services"
           />
         </div>
         {/* Information Section */}
@@ -35,10 +35,10 @@ const Electrical = () => {
             Our expert team ensures precision, safety, and reliability in all electrical and instrumentation services to meet industry standards.
           </p>
         </div>
-        </div>
-        <Footer />
       </div>
-      );
+      <Footer />
+    </div>
+  );
 };
 
-      export default Electrical;
+export default Electrical;
