@@ -31,7 +31,7 @@ const ServicesPage = () => {
   return (
   
       <div className="services-container">
-        <h1 className="page-title">Our Services</h1>
+        <h1 className="page-title1">Our Services</h1>
         <div className="service-cards-container">
           {services.map((service, index) => (
             <Link to={service.link} className="service-item" key={index}>  {/* Wrap service item with Link */}

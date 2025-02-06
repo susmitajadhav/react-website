@@ -46,8 +46,7 @@
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: 0000;
-
+  text-transform: uppercase;
 }
 
 .contact-card {
@@ -82,7 +81,7 @@
 
 .contact-card li i {
   font-size: 22px;
-  color: #ff5e00;
+  color: #ffd700;
 }
 
 /* Working Hours */

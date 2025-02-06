@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import emailjs from "@emailjs/browser";
 import "./ContactPage.css";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const CustomContactPage = () => {
+const CustomContactPage = React.memo(() => {
   const [formData, setFormData] = useState({
     userFirstName: "",
     userLastName: "",
@@ -13,38 +13,44 @@ const CustomContactPage = () => {
     userMessage: "",
   });
   const [statusMessage, setStatusMessage] = useState("");
+  const [loading, setLoading] = useState(false); // Add loading state
 
-  const handleChange = (e) => {
+  const handleChange = useCallback((e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs
-      .send(
-        "your_service_id", // Replace with your EmailJS Service ID
-        "your_template_id", // Replace with your EmailJS Template ID
-        {
-          from_name: `${formData.userFirstName} ${formData.userLastName}`,
-          from_email: formData.userEmail,
-          phone: formData.userPhone,
-          message: formData.userMessage,
-        },
-        "your_user_id" // Replace with your EmailJS User ID
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setStatusMessage("Your message has been sent successfully!");
-          setFormData({ userFirstName: "", userLastName: "", userEmail: "", userPhone: "", userMessage: "" });
-        },
-        (err) => {
-          console.log("FAILED...", err);
-          setStatusMessage("Something went wrong. Please try again.");
-        }
-      );
-  };
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      setLoading(true); // Set loading state
+      emailjs
+        .send(
+          "your_service_id",
+          "your_template_id",
+          {
+            from_name: `${formData.userFirstName} ${formData.userLastName}`,
+            from_email: formData.userEmail,
+            phone: formData.userPhone,
+            message: formData.userMessage,
+          },
+          "your_user_id"
+        )
+        .then(
+          (response) => {
+            setStatusMessage("Your message has been sent successfully!");
+            setFormData({ userFirstName: "", userLastName: "", userEmail: "", userPhone: "", userMessage: "" });
+          },
+          (err) => {
+            setStatusMessage("Something went wrong. Please try again.");
+          }
+        )
+        .finally(() => {
+          setLoading(false); // Reset loading state
+        });
+    },
+    [formData]
+  );
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -84,7 +90,10 @@ const CustomContactPage = () => {
                 <input type="text" name="userPhone" value={formData.userPhone} onChange={handleChange} placeholder="Phone No" required />
               </div>
               <textarea name="userMessage" value={formData.userMessage} onChange={handleChange} placeholder="Message" required />
-              <button type="submit" className="custom-submit-btn">Submit</button>
+              
+              <button type="submit" className="custom-submit-btn" disabled={loading}>
+                {loading ? "Sending..." : "Submit"}
+              </button>
               {statusMessage && <p className="status-message">{statusMessage}</p>}
             </form>
           </div>
@@ -106,6 +115,6 @@ const CustomContactPage = () => {
       <Footer />
     </div>
   );
-};
+});
 
 export default CustomContactPage;
