@@ -19,8 +19,7 @@ const AboutUs = () => {
       <section className="section about" data-aos="fade-up">
         <h2>About Us</h2>
         <p>
-          At <strong>Deckvalue</strong>, we are dedicated to providing expert valuation services that align with the Companies Act and Income Tax Rules. 
-          Our mission is to offer accurate assessments, helping businesses make informed financial decisions.
+            M/s. SAV- Tech Associate was established in 2024. It is  specializes in creating innovative solutions for Sugar,Power plant,Co-Genration,Distellery & Ethenol,Khandsar & Jaggery businesses, ranging from designing,Manufacturing,Erection & Commissioning. . They offer a wide range of services to help businesses succeed, including Consultancy services,Mechanical Engineering Services,Electrical & Instumantation Services,O & M Services and supply of Machinery & Spares for New Plants,Industrial Automation, making processes more efficient and effective. Their goal is to use technology to solve problems and drive growth for their clients.
         </p>
       </section>
 
@@ -28,7 +27,7 @@ const AboutUs = () => {
       <section className="section mission" data-aos="fade-up">
         <h2>Our Mission</h2>
         <p>
-          We strive to deliver cutting-edge solutions that drive innovation, sustainability, and business growth.
+        We are dedicated to delivering cutting-edge products and services that exceed our client's expectations. We strive for excellence in quality, innovation and customer satisfaction. Our mission is to contribute to a sustainable and technologically advanced future.
         </p>
       </section>
 
@@ -38,27 +37,27 @@ const AboutUs = () => {
         <div className="pillars-grid">
           <div className="pillar-card" data-aos="zoom-in">
             <FaCogs className="icon" />
-            <p>Innovation in Engineering</p>
+            <p>Engineering Innovation</p>
           </div>
           <div className="pillar-card" data-aos="zoom-in">
             <FaRocket className="icon" />
-            <p>Excellence in Customer Service</p>
+            <p>Customer Service Excellence</p>
           </div>
           <div className="pillar-card" data-aos="zoom-in">
             <FaUsers className="icon" />
-            <p>Commitment to Sustainability</p>
+            <p>Sustainable Commitment</p>
           </div>
           <div className="pillar-card" data-aos="zoom-in">
             <FaGlobe className="icon" />
-            <p>Global Partnerships & Collaboration</p>
+            <p>International Collaboration</p>
           </div>
           <div className="pillar-card" data-aos="zoom-in">
             <FaLightbulb className="icon" />
-            <p>Continuous Innovation</p>
+            <p>Continuous Improvement</p>
           </div>
           <div className="pillar-card" data-aos="zoom-in">
             <FaHandshake className="icon" />
-            <p>Strong Client Relationships</p>
+            <p>Strong Client Relations</p>
           </div>
         </div>
       </section>
@@ -67,7 +66,7 @@ const AboutUs = () => {
       <section className="section vision" data-aos="fade-up">
         <h2>Our Vision</h2>
         <p>
-          To be the global leader in expert valuations, ensuring businesses make well-informed financial and strategic decisions.
+        To be a global leader in providing innovative, sustainable and integrated solutions in the fields of Sugar,Power plant,Co-Genration,Distellery & Ethenol,Khandsar & Jaggery businesses as Consultancy,Mechanical,Electrical & Instrumentation Services, revolutionizing industries and empowering businesses worldwide.
         </p>
       </section>
 

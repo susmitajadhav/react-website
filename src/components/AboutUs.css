@@ -37,6 +37,10 @@ p {
   color: #555;
 }
 
+.pillars p{
+  color: white;
+}
+
 /* Mission Pillars Grid */
 .pillars-grid {
   display: grid;
