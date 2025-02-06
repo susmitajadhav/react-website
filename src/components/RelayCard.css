@@ -1,173 +1,130 @@
-/* ==== CONTAINER ==== */
+/* // RelayCard.css */
+
 .relay-card-container {
-  max-width: 1100px;
-  margin: 50px auto;
-  padding: 50px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  font-family: "Poppins", sans-serif;
-  animation: fadeIn 1.2s ease-in-out;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
-/* ==== HEADINGS ==== */
-h1, h2, h3 {
+.main-heading {
+  font-size: 40px;
+  font-weight: bold;
   text-align: center;
-  font-weight: 700;
-}
-
-h1 {
-  font-size: 2.8em;
-  color: #1a1a1a;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-h1::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #0073e6;
-  margin: 10px auto;
-  border-radius: 2px;
-}
-
-.section-title {
-  font-size: 2.2em;
-  color: #333;
-  margin-top: 40px;
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #0073e6;
-  margin: 10px auto;
-  border-radius: 2px;
+  margin-bottom: 40px;
+  color: #00a84d; /* Converted to lowercase */
+  text-shadow: 3px 3px 6px rgba(180, 175, 175, 0.3); /* Adds a smooth shadow */
 }
 
 .sub-heading {
-  font-size: 1.6em;
-  color: #444;
-  margin-top: 30px;
-}
-
-/* ==== TEXT STYLES ==== */
-.description, .applications, .contact-info {
-  font-size: 1.2em;
-  line-height: 1.8;
+  font-size: 1.8rem;
   color: #555;
+  margin-top: 30px;
+  margin-bottom: 15px;
   text-align: center;
-  margin-bottom: 30px;
 }
 
-/* ==== IMAGE SECTION ==== */
+.description {
+  font-size: 1.2rem;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
 .image-section {
   text-align: center;
-  margin: 40px 0;
+  margin: 30px 0;
 }
 
 .relay-card-image {
-  width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.relay-card-image:hover {
-  transform: scale(1.05);
+.content-list ul, .features-list {
+  padding-left: 20px;
+  list-style-type: disc;
 }
 
-/* ==== LIST STYLING ==== */
-.features-list, .applications-list {
-  list-style: none;
-  padding: 0;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.features-list li, .applications-list li {
-  font-size: 1.1em;
+.content-list ul li, .features-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
   color: #333;
-  margin: 12px 0;
-  display: flex;
-  align-items: center;
-  line-height: 1.6;
-  transition: all 0.3s ease-in-out;
 }
 
-.features-list li strong {
-  color: #0073e6;
-}
-
-.features-list li:hover, .applications-list li:hover {
-  transform: translateX(8px);
-}
-
-/* ==== CONTACT INFO ==== */
 .contact-info {
-  font-size: 1.2em;
+  font-size: 1.2rem;
+  color: #000;
   font-weight: bold;
-  color: #0073e6;
   text-align: center;
   margin-top: 30px;
 }
 
-/* ==== RESPONSIVE DESIGN ==== */
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .main-heading {
+    font-size: 2.2rem;
+  }
+  .sub-heading {
+    font-size: 1.2rem;
+  }
+  .description {
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .relay-card-container {
-    padding: 40px;
+    padding: 15px;
   }
-  h1 {
-    font-size: 2.5em;
+  .main-heading {
+    font-size: 2.5rem;
   }
-  .description, .applications {
-    font-size: 1.1em;
+  .sub-heading {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .content-list ul li, .features-list li {
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 768px) {
-  .relay-card-container {
-    padding: 30px;
-  }
-  h1 {
-    font-size: 2.2em;
-  }
-  .features-list, .applications-list {
+  .main-heading {
+    font-size: 1.8rem;
     text-align: center;
+  }
+  .sub-heading {
+    font-size: 1.4rem;
+  }
+  .description {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width: 480px) {
   .relay-card-container {
-    padding: 20px;
+    padding: 10px;
   }
-  h1 {
-    font-size: 2em;
+  .main-heading {
+    font-size: 1.6rem;
   }
-  .description, .applications, .contact-info {
-    font-size: 1em;
+  .sub-heading {
+    font-size: 1.3rem;
   }
-}
-
-/* ==== ANIMATIONS ==== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+  .description {
+    font-size: 0.9rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .content-list ul li, .features-list li {
+    font-size: 0.85rem;
   }
-}
-
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
+  .contact-info {
+    font-size: 1rem;
+  }
 }
