@@ -7,7 +7,7 @@ const Electrical = () => {
   return (
     <div>
       <Header />
-      <div className="containers">
+      <div className="consultancy-container">
         {/* Image Section */}
         <div className="image-container">
           <img

@@ -7,9 +7,9 @@ const OM = () => {
   return (
     <div>
       <Header />
-      <div className="containers">
+      <div className="consultancy-container">
         {/* Image Section */}
-        <div className="image-container animate-slide-in">
+        <div className="image-container">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS059frnmzmI_KVvyU3GfNKC09N_JzAH79Obg&s"
             className="image"
@@ -17,7 +17,7 @@ const OM = () => {
           />
         </div>
         {/* Information Section */}
-        <div className="info-container animate-fade-in">
+        <div className="info-container">
           <h1 className="title">O & M Services</h1>
           <p className="description">
             We provide comprehensive Operation & Maintenance (O&M) services for the following plants:
