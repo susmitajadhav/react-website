@@ -111,100 +111,69 @@
     padding: 60px 20px;
     background: #f8f9fa;
 }
+
+.meet-our-people h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #048038;
+}
+
+/* Team Container */
 .team-container {
     display: flex;
-    flex-wrap: wrap; /* Ensures cards wrap */
-    justify-content: center; /* Centers items */
-    gap: 20px; /* Adds spacing between cards */
-    padding: 20px;
-    max-width: 100%; /* Ensures it doesn't exceed the parent container */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-}
-
-.team-card {
-    flex: 0 0 200px; /* Fixed width for each card */
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-/* People Container - SINGLE ROW */
-.people-container {
-    display: flex;
-    justify-content: center;  /* Center all items */
-    align-items: center;
-    flex-wrap: wrap; /* Allows wrapping for responsiveness */
-    max-width: 1200px;
-    gap: 20px;
-    margin: 0 auto;
-    overflow-x: auto; /* Enable horizontal scrolling if needed */
-    padding-bottom: 15px;
-}
-
-
-.people-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+   
     justify-content: center;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-/* Hide scrollbar for cleaner look */
-.people-container::-webkit-scrollbar {
-    height: 6px;
-}
-
-.people-container::-webkit-scrollbar-thumb {
-    background-color: #048038;
-    border-radius: 5px;
-}
-
-.people-container::-webkit-scrollbar-track {
-    background: #e0e0e0;
-}
-
-/* Person Card */
-.person-card {
-    flex: 0 0 auto;
-    width: 200px; /* Fixed width */
-    text-align: center;
+/* Team Card */
+.team-card {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
     transition: transform 0.3s ease-in-out;
 }
 
-.person-card:hover {
+.team-card:hover {
     transform: scale(1.05);
 }
 
-/* Circular Profile Photo */
-.person-photo {
-    width: 100px;
-    height: 100px;
+/* Team Photo */
+.team-photo {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: 3px solid #048038;
 }
 
-.person-name {
-    font-size: 1.2rem;
-    font-weight: bold;
+/* Team Member Name */
+.team-card h3 {
+    font-size: 1.5rem;
     color: #333;
-    margin-bottom: 5px;
+    margin: 10px 0 5px;
 }
 
-.person-role {
+/* Team Position */
+.team-position {
     font-size: 1rem;
-    color: #666;
+    color: #555;
+    font-weight: bold;
 }
+
+/* Team Intro */
+.team-intro {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 10px;
+}
+
 
 
 
@@ -212,9 +181,7 @@
 @media (max-width: 1440px) {
     .customer-slider { gap: 25px; }
     .customer-logo { width: 160px; height: 110px; }
-    .people-container {
-        gap: 15px;
-    }
+   
    
 }
 
@@ -224,7 +191,9 @@
     .customer-slider { gap: 20px; }
     .customer-logo { width: 150px; height: 100px; }
 
-  
+    .team-container {
+        flex-wrap: wrap!important;
+    }
     
 }
 
@@ -235,16 +204,10 @@
     }
     .customer-slider { gap: 15px; }
     .customer-logo { width: 130px; height: 90px; }
-
-    .people-container {
-        overflow-x: auto; /* Scroll instead of wrapping */
-        justify-content: flex-start; /* Align to left */
+    .team-container {
+        flex-wrap: wrap!important;
     }
-    
-    .person-photo {
-        width: 90px;
-        height: 90px;
-    }
+  
 }
 
 
@@ -256,12 +219,10 @@
     .customer-slider { gap: 10px; }
     .customer-logo { width: 110px; height: 80px; padding: 5px; }
     .customer-logo img { max-width: 90%; }
-
-    
-    .person-photo {
-        width: 80px;
-        height: 80px;
+    .team-container {
+        flex-wrap: wrap!important;
     }
+   
 }
 
 @media (max-width: 320px) {
@@ -271,49 +232,33 @@
     .customer-slider { gap: 5px; }
     .customer-logo { width: 100px; height: 70px; padding: 5px; }
     .customer-logo img { max-width: 85%; }
-
-    .meet-our-people {
-        padding: 20px 10px;
-    }
-
-    .people-container {
-        flex-direction: column; /* Stack elements in a column */
-        align-items: center;
-        justify-content: center;
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-    }
-
-    
-
-    .person-photo {
-        width: 70px;
-        height: 70px;
-    }
-
-    .person-name {
-        font-size: 1rem;
-    }
-
-    .person-role {
-        font-size: 0.9rem;
+    .team-container {
+        flex-wrap: wrap!important;
     }
 }
 
 /* Meet Our People - Responsive Layout */
-@media (min-width: 1025px) {
-    .person-card {
-        width: calc(20% - 10px); /* 5 in a row */
+/* Responsive Grid Layout */
+@media (min-width: 1024px) and (max-width: 1440px)  {
+    .team-card {
+        flex: 0 1 calc(20% - 20px); /* 5 cards per row */
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .person-card {
-        width: calc(33.33% - 10px); /* 3 in a row */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .team-card {
+        flex: 0 1 calc(33.33% - 20px); /* 3 cards per row */
     }
 }
 
 @media (max-width: 767px) {
-    .person-card {
-        width: calc(50% - 10px); /* 2 in a row */
+    .team-card {
+        flex: 0 1 calc(50% - 20px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-card {
+        flex: 0 1 100%; /* 1 card per row for very small screens */
     }
 }
