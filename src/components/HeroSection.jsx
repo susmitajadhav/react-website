@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./HeroSection.css";
 import Projects from "./Projects"; // Import the Projects component
 
+
 const HeroSection = () => {
   const settings = {
     dots: true,
@@ -62,6 +63,8 @@ const HeroSection = () => {
       {/* Add Projects section below HeroSection */}
       <Projects />
     </>
+
+    
   );
 };
 

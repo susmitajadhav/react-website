@@ -1,5 +1,5 @@
 import React from "react";
-import "./Manufacturing.css";
+import "./ConsultancyServices.css"; // Using the same CSS file for consistency
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -9,38 +9,39 @@ const MechanicalEngineering = () => {
       <Header />
       <div className="consultancy-container">
         {/* Image Section */}
-        <div className="image-container">
+        <div className="image-container1 fade-in">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUBkbETGBOr5-vnTTi9th3MP-hlQUbu2aOxg&s"
-            className="image"
+            className="image1 zoom-in"
             alt="Mechanical Engineering"
           />
         </div>
+
         {/* Information Section */}
-        <div className="info-container">
-          <h1 className="title">Mechanical Engineering Services</h1>
-          <p className="description">
+        <div className="info-container1 slide-in">
+          <h1 className="consultancy_title">Mechanical Engineering Services</h1>
+          <p className="consultancy_description">
             We provide a wide range of mechanical services, including:
           </p>
-          <ul className="list">
-            <li>New Project Turnkey Erection & Commissioning Work</li>
-            <li>Light & Heavy Fabrication Work (M.S. & S.S. Both)</li>
+          <ul className="consultancy_list stylish-list">
+            <li>🔧 New Project Turnkey Erection & Commissioning Work</li>
+            <li>⚙️ Light & Heavy Fabrication Work (M.S. & S.S. Both)</li>
             <li>
-              Annual Maintenance Work for:
-              <ul className="sub-list">
-                <li>Total Sugar Plants</li>
-                <li>Co-Generation/Power Plants</li>
-                <li>Distillery & Ethanol Plants</li>
-                <li>Jaggery & Khandsary Plants</li>
+              🏭 Annual Maintenance Work for:
+              <ul className="consultancy_sub-list">
+                <li>🔹 Total Sugar Plants</li>
+                <li>🔹 Co-Generation/Power Plants</li>
+                <li>🔹 Distillery & Ethanol Plants</li>
+                <li>🔹 Jaggery & Khandsary Plants</li>
               </ul>
             </li>
-            <li>Boiling House Machinery Modification, Rectification & Upgradation</li>
-            <li>Material Handling System Maintenance & Rectification</li>
-            <li>Boiler Annual Maintenance Work</li>
-            <li>RLA (Remaining Life Assessment) & NDT (Non-Destructive Testing) Services</li>
-            <li>Rotary Equipment Site Balancing Work</li>
+            <li>🔩 Boiling House Machinery Modification, Rectification & Upgradation</li>
+            <li>🚛 Material Handling System Maintenance & Rectification</li>
+            <li>🔥 Boiler Annual Maintenance Work</li>
+            <li>🛠️ RLA (Remaining Life Assessment) & NDT (Non-Destructive Testing) Services</li>
+            <li>⚖️ Rotary Equipment Site Balancing Work</li>
           </ul>
-          <p className="additional-info">
+          <p className="consultancy_additional-info">
             Our expertise ensures efficient solutions, precision engineering, and timely delivery for all your mechanical needs.
           </p>
         </div>

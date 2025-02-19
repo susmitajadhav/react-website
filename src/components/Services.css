@@ -1,111 +1,108 @@
-/* service.css */
-.projects-page {
-    text-align: center;
-    margin: 20px auto;
-    max-width: 1200px;
-    padding: 20px;
-    font-family:"Poppins",sans-serif;
-  }
+/* Main Container */
+.modern-services-container {
+  text-align: center;
+  margin: 20px auto;
+  
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #c2e9fb);
+  border-radius: 15px;
+}
 
-  .page-title1 {
-    font-size: 46px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #00A84D;
-    text-shadow: 3px 3px 6px rgba(180, 175, 175, 0.3); /* Adds a smooth shadow */
+/* Title */
+.modern-services-title {
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #034efc;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Animated underline */
+.modern-services-title::after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: #034efc;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Grid Layout */
+.modern-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.modern-service-name h2{
+font-size: 20px;
+text-transform: lowercase;
+}
+
+/* Card Styling */
+.modern-service-card {
+ 
+  height: 360px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  border: 3px solid transparent;
+}
+
+/* Hover Animation */
+.modern-service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(3, 78, 252, 0.8);
+}
+
+/* Image */
+.modern-card-image {
+  width: 100%;
+  height: 75%;
+}
+
+.modern-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(3, 78, 252, 0.5);
+}
+
+/* Title */
+.modern-card-text {
+  width: 100%;
+  height: 25%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .modern-services-grid {
+      grid-template-columns: repeat(2, 1fr);
   }
-  
-  .projects-page h1 {
-    font-size: 36px;
-    color: #1a3c4f;
+}
+
+@media (max-width: 768px) {
+  .modern-services-grid {
+      grid-template-columns: 1fr;
   }
-  
-  .projects-page p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
-  }
-  
-  /* Projects Grid */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    justify-items: center;
-  }
-  
-  .project-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Project Box Styling */
-  .project-box {
-    width: 300px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1a3c4f;
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .project-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.7;
-  }
-  
-  .project-box .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .project-box:hover .overlay {
-    opacity: 1;
-  }
-  
-  /* Text Inside Overlay */
-  .project-box .overlay p {
-    font-size: 18px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .projects-page h1 {
-      font-size: 28px;
-    }
-  
-    .projects-page p {
-      font-size: 16px;
-    }
-  
-    .projects-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .project-box {
-      width: 250px;
-      height: 180px;
-    }
-  }
+}
