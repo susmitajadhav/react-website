@@ -1,8 +1,9 @@
 /* Projects Section */
 .projects-section {
     text-align: center;
-    padding: 70px 20px;
+    padding: 90px 30px;
     background: linear-gradient(to bottom, #ffffff, #f4f4f4);
+    width: 100%;
 }
 
 .projects-section h2 {
@@ -14,17 +15,18 @@
 
 .projects-container {
     display: flex;
-    flex-wrap: wrap;
+ 
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Project Card */
 .project-card {
     flex: 1;
-    max-width: 250px;
     min-width: 200px;
+    max-width: 280px;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -54,17 +56,60 @@
 }
 
 .project-card p {
-    font-size: 1rem;
+    
     color: #666;
     margin: 0px;
 }
 
+/* Responsive Layout */
+@media (max-width: 1440px) {
+    .projects-container {
+        max-width: 1100px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .projects-container {
+    
+        justify-content: center;
+    }
+    .project-card {
+        flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        max-width: 700px;
+        justify-content: center;
+    }
+    .project-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    }
+    .project-card p {font-size: 0.8rem!important;}
+}
+
+@media (max-width: 480px) {
+    .projects-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .project-card {
+        flex: 1 1 calc(100% - 20px); /* 1 card per row */
+    }
+    .project-card p {font-size: 0.8rem!important;}
+}
+
+
+
 /* Satisfied Customers Section */
 .satisfied-customers {
     text-align: center;
-    padding: 50px 20px;
+    padding: 80px 20px;
     overflow: hidden;
     max-width: 100%;
+    height: 350px;
     background: url("https://images.pexels.com/photos/326333/pexels-photo-326333.jpeg?auto=compress&cs=tinysrgb&w=600");
     background-size: cover;
     background-position: center;
@@ -76,6 +121,7 @@
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #fff;
+    margin-bottom: 40px;
 }
 
 .customer-slider {
@@ -84,6 +130,7 @@
     overflow: hidden;
     white-space: nowrap;
     padding: 20px 0;
+    margin-top: 50px;
 }
 
 .customer-logo {
@@ -177,16 +224,20 @@
 
 
 
-/* Responsive Styles */
+
+
+
+
+/* //customer  */
+
 @media (max-width: 1440px) {
     .customer-slider { gap: 25px; }
-    .customer-logo { width: 160px; height: 110px; }
-   
+    .customer-logo { width: 160px; height: 110px; }  
    
 }
 
 @media (max-width: 1024px) {
-    .projects-container { gap: 20px; }
+  
     .project-card { max-width: 220px; }
     .customer-slider { gap: 20px; }
     .customer-logo { width: 150px; height: 100px; }
@@ -198,10 +249,8 @@
 }
 
 @media (max-width: 768px) {
-    .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
+   
+    .project-card p {font-size: 0.8rem!important;}
     .customer-slider { gap: 15px; }
     .customer-logo { width: 130px; height: 90px; }
     .team-container {
@@ -216,17 +265,17 @@
 
 
 @media (max-width: 480px) {
-    .projects-section h2 { font-size: 2rem; }
+   
     .satisfied-customers h2 { font-size: 1.8rem; }
     .satisfied-customers { padding: 30px 15px; }
     .customer-slider { gap: 10px; }
     .customer-logo { width: 110px; height: 80px; padding: 5px; }
     .customer-logo img { max-width: 90%; }
-   
+    .project-card p {font-size: 0.8rem!important;}
 }
 
 @media (max-width: 320px) {
-    .projects-section { padding: 30px 15px; }
+  
     .satisfied-customers { padding: 30px 15px; }
     .satisfied-customers h2 { font-size: 1.4rem; }
     .customer-slider { gap: 5px; }
