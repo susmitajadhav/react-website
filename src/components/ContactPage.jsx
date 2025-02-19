@@ -1,130 +1,168 @@
-import React, { useState, useEffect, useCallback, lazy, Suspense } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import Header from "./Header";
+import Footer from "./Footer";
 import "./ContactPage.css";
 
-const Footer = lazy(() => import("./Footer"));
-const Header = lazy(() => import("./Header"));
-
-const CustomContactPage = React.memo(() => {
+const ContactPage = () => {
   const [formData, setFormData] = useState({
-    userFirstName: "",
-    userLastName: "",
-    userEmail: "",
-    userPhone: "",
-    userMessage: "",
+    name: "",
+    email: "",
+    subject: "",
+    phone: "",
+    message: "",
   });
-  const [statusMessage, setStatusMessage] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
 
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-    window.scrollTo(0, 0);
-  }, []);
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  const handleChange = useCallback((e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  }, []);
-
-  const handleSubmit = useCallback(
-    (e) => {
-      e.preventDefault();
-      setLoading(true);
-      emailjs
-        .send(
-          "service_hsx6zkv",
-          "template_a7twor8",
-          {
-            from_name: `${formData.userFirstName} ${formData.userLastName}`,
-            from_email: formData.userEmail,
-            phone: formData.userPhone,
-            message: formData.userMessage,
-          },
-          "0qB6fuI7GqVF0dC8I"
-        )
-        .then(
-          () => {
-            setStatusMessage("Your message has been sent successfully!");
-            setFormData({ userFirstName: "", userLastName: "", userEmail: "", userPhone: "", userMessage: "" });
-          },
-          () => {
-            setStatusMessage("Something went wrong. Please try again.");
-          }
-        )
-        .finally(() => {
-          setLoading(false);
-        });
-    },
-    [formData]
-  );
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .send(
+        "service_hsx6zkv", // Service ID
+        "template_a7twor8", // Template ID
+        formData,
+        "your_user_id" // Replace with your EmailJS User ID
+      )
+      .then(
+        () => {
+          setStatus("Thank you! Your message has been sent successfully.");
+          setFormData({ name: "", email: "", subject: "", phone: "", message: "" });
+          setTimeout(() => setStatus(""), 4000);
+        },
+        () => {
+          setStatus("Oops! Something went wrong. Please try again.");
+        }
+      );
+  };
 
   return (
     <div>
-      <Suspense fallback={<div>Loading Header...</div>}>
-        <Header />
-      </Suspense>
-
-      <div className="custom-contact-container">
-        <header className="custom-contact-header">
+      <Header />
+      <div className="contact-page-container">
+        <div className="contact-header">
           <h1>Contact Us</h1>
-          <p>We are here to assist you. Feel free to reach out!</p>
-        </header>
+          <p>We'd love to hear from you! Reach out with any inquiries or feedback.</p>
+        </div>
 
-        <div className="custom-contact-content">
-          <div className="custom-contact-details" data-aos="fade-right">
-            <h2>Our Contact Details</h2>
+        <div className="contact-content">
+          {/* Register Office */}
+          <div className="contact-details animated-fade">
             <div className="contact-card">
+              <h2>🏢 Register Office</h2>
               <ul>
-                <li><i className="fas fa-phone-alt"></i> <strong>Phone:</strong> 9422225058, 9011731731, 9822760005</li>
-                <li><i className="fas fa-envelope"></i> <strong>Email:</strong> info@nrfabricator.com</li>
-                <li><i className="fas fa-map-marker-alt"></i> <strong>Office:</strong> G-58, M.I.D.C, Ahmednagar, Maharashtra - 414111</li>
-                <li><i className="fas fa-clock"></i> <strong>Working Hours:</strong> Mon - Sat: 9:00 AM - 6:00 PM</li>
+                <li>📍 Address: 456 Corporate Tower, Main Street, Mumbai, India</li>
+                <li>📞 Phone: +91 98765 43210</li>
+                <li>📠 Fax: +91 98765 43211</li>
+                <li>📧 Email: register@company.com</li>
+                <li>🕒 Working Hours: Mon - Fri, 9 AM - 6 PM</li>
               </ul>
             </div>
           </div>
 
-          <div className="custom-contact-form-wrapper" data-aos="fade-left">
-            <h2>Send Us a Message</h2>
-            <form className="custom-contact-form" onSubmit={handleSubmit}>
-              <div className="custom-form-group">
-                <input type="text" name="userFirstName" value={formData.userFirstName} onChange={handleChange} placeholder="First Name" required />
-                <input type="text" name="userLastName" value={formData.userLastName} onChange={handleChange} placeholder="Last Name" required />
-              </div>
-              <div className="custom-form-group">
-                <input type="email" name="userEmail" value={formData.userEmail} onChange={handleChange} placeholder="Email" required />
-                <input type="text" name="userPhone" value={formData.userPhone} onChange={handleChange} placeholder="Phone No" required />
-              </div>
-              <textarea name="userMessage" value={formData.userMessage} onChange={handleChange} placeholder="Message" required />
-              
-              <button type="submit" className="custom-submit-btn" disabled={loading}>
-                {loading ? "Sending..." : "Submit"}
-              </button>
-              {statusMessage && <p className="status-message">{statusMessage}</p>}
-            </form>
+          <div className="contact-form-wrapper">
+            <div className="contact-card">
+              <h2>Send Us a Message</h2>
+              <form className="contact-form" onSubmit={handleSubmit}>
+                <div className="form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                  />
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Phone Number"
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
+                </div>
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+                <button type="submit" className="submit-btn">Send Message</button>
+                {status && <p className="status-message">{status}</p>}
+              </form>
+            </div>
           </div>
         </div>
 
-        <div className="custom-map-container">
-          <h2>Visit Our Office</h2>
-          <iframe
-            title="Office Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60583.05142847984!2d74.7201486!3d19.0948288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc7fe70c47a257%3A0x7f6e10d67c9e6357!2sG-58%2C%20M.I.D.C%2C%20Ahmednagar%2C%20Maharashtra%20414111!5e0!3m2!1sen!2sin!4v1646372164539!5m2!1sen!2sin"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
+        {/* Addresses and Maps for Different Offices */}
+        <div className="map-container">
+          <h2>📍 Our Offices</h2>
+          <div className="map-grid">
 
-      <Suspense fallback={<div>Loading Footer...</div>}>
-        <Footer />
-      </Suspense>
+            {/* Register Office */}
+            <div className="map-box animated-fade">
+              <h3>🏢 Register Office</h3>
+              <p>123, Corporate Avenue, Mumbai, India</p>
+              <p>📞 +91 98765 43210 | 📠 Fax: +91 98765 43211</p>
+              <p>📧 Email: register@company.com</p>
+              <iframe
+                src="https://maps.google.com/maps?q=Mumbai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            {/* Branch Office */}
+            <div className="map-box animated-fade">
+              <h3>🏢 Branch Office</h3>
+              <p>456, Business Tower, Delhi, India</p>
+              <p>📞 +91 87654 32109 | 📠 Fax: +91 87654 32110</p>
+              <p>📧 Email: branch@company.com</p>
+              <iframe
+                src="https://maps.google.com/maps?q=Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            {/* Manufacturing Office */}
+            <div className="map-box animated-fade">
+              <h3>🏭 Manufacturing Office</h3>
+              <p>789, Industrial Park, Bangalore, India</p>
+              <p>📞 +91 76543 21098 | 📠 Fax: +91 76543 21099</p>
+              <p>📧 Email: manufacturing@company.com</p>
+              <iframe
+                src="https://maps.google.com/maps?q=Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <Footer />
     </div>
   );
-});
+};
 
-export default CustomContactPage;
+export default ContactPage;
