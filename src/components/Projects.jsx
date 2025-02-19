@@ -19,16 +19,16 @@ const teamMembers = [
   {
     id: 1,
     name: "John Doe",
-    position: "CEO & Founder",
+    position: "CEO & ",
     photo: "https://randomuser.me/api/portraits/men/1.jpg",
-    intro: "An innovative leader with a passion for technology and business growth.",
+    intro: "An innovative leader with a passion for technol.",
   },
   {
     id: 2,
     name: "Jane Smith",
-    position: "Head of Engineering",
+    position: "Head of ",
     photo: "https://randomuser.me/api/portraits/women/2.jpg",
-    intro: "Expert in electrical and mechanical systems, driving engineering excellence.",
+    intro: "Expert in electrical and mechanical systems,.",
   },
   {
     id: 3,

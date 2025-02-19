@@ -207,7 +207,10 @@
     .team-container {
         flex-wrap: wrap!important;
     }
-  
+    
+    .team-card {
+        flex: 0 1 calc(33.33% - 20px)!important;; /* 5 cards per row */
+    }
 }
 
 
@@ -219,9 +222,6 @@
     .customer-slider { gap: 10px; }
     .customer-logo { width: 110px; height: 80px; padding: 5px; }
     .customer-logo img { max-width: 90%; }
-    .team-container {
-        flex-wrap: wrap!important;
-    }
    
 }
 
@@ -235,30 +235,54 @@
     .team-container {
         flex-wrap: wrap!important;
     }
+    .team-card {
+        flex: 0 1 100%!important; /* 1 card per row for very small screens */
+    }
 }
 
 /* Meet Our People - Responsive Layout */
 /* Responsive Grid Layout */
 @media (min-width: 1024px) and (max-width: 1440px)  {
     .team-card {
-        flex: 0 1 calc(20% - 20px); /* 5 cards per row */
+        flex: 0 1 calc(20% - 20px)!important;; /* 5 cards per row */
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+
+@media (min-width:768px) and (max-width: 1023px)  {
     .team-card {
-        flex: 0 1 calc(33.33% - 20px); /* 3 cards per row */
+        flex: 0 1 calc(50% - 20px)!important; /* 2 cards per row */
+        padding: 5px;
     }
+    .team-container {
+        flex-wrap: wrap!important;
+    }
+    .team-intro {
+        font-size: 0.75rem;
+    }
+
+    .team-card h3 {
+        font-size: 1.2rem;
+     
+    }
+    .team-position {
+        font-size: 0.8rem;
+    }
+    
 }
+
 
 @media (max-width: 767px) {
     .team-card {
-        flex: 0 1 calc(50% - 20px); /* 2 cards per row */
+        flex: 0 1 100%!important; /* 1 card per row */
+        padding: 40px;
     }
-}
-
-@media (max-width: 480px) {
-    .team-card {
-        flex: 0 1 100%; /* 1 card per row for very small screens */
+    .team-container {
+        display: flex;
+        flex-wrap: wrap!important;
+        gap: 40px!important;
+       
     }
+   
+   
 }
