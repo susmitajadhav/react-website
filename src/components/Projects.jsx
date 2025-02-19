@@ -15,27 +15,28 @@ const customers = [
 ];
 
 // Team Members
+// Team Members 
 const teamMembers = [
   {
     id: 1,
-    name: "John Doe",
-    position: "CEO & ",
+    name: "Mr. Sudhir Paatil",
+    position: "Managing Director",
     photo: "https://randomuser.me/api/portraits/men/1.jpg",
-    intro: "An innovative leader with a passion for technol.",
+    intro: "He has 25+ years of experience, including 11 years as Chief Engineer, 2 years as Works Manager, and 3 years as Managing Director. He led expansions of sugar plants from 1250 TCD to 3000 TCD and pioneered the erection of a 2500 TCD Sugar Plant with a 22 MW Cogeneration plant.",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    position: "Head of ",
-    photo: "https://randomuser.me/api/portraits/women/2.jpg",
-    intro: "Expert in electrical and mechanical systems,.",
+    name: "Mr. Vikas Patil",
+    position: "Project Engineer",
+    photo: "https://randomuser.me/api/portraits/men/2.jpg",
+    intro: "With 25+ years of experience, he has 18+ years as a Project Engineer in Sugar Plant manufacturing companies. He has handled numerous sugar plant erection and commissioning projects in African countries and Vietnam.",
   },
   {
     id: 3,
-    name: "Robert Brown",
+    name: "Mr. Amarsinh Patil",
     position: "Project Manager",
     photo: "https://randomuser.me/api/portraits/men/3.jpg",
-    intro: "Skilled in project execution, ensuring timely and quality deliverables.",
+    intro: "An expert in design, installation, and project management with 8+ years of experience in Sugar Plants, Power Plants, Pharmaceuticals, and Cement Plants. Specializes in Electrical & Instrumentation work across India, Africa, and Europe.",
   },
   {
     id: 4,

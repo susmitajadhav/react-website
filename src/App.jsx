@@ -23,6 +23,7 @@ import ConsultancyServices from './components/ConsultancyServices';
 import MechanicalEngineering from './components/MechanicalEngineering';
 import OM from './components/OM';
 import Electrical from './components/Electrical';
+import Instrumentation from './components/Instrumentation';
 
 const Home = () => {
   return (
@@ -74,7 +75,8 @@ const App = () => {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/om" element={<OM />} />
         <Route path="/electrical" element={<Electrical />} />
-        <Route path="/consultancyservices" element={<ConsultancyServices />} />
+        <Route path="/Instrumentation" element={<Instrumentation />} />
+
       </Routes>
     </Router>
   );

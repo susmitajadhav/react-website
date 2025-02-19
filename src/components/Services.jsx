@@ -23,12 +23,12 @@ const Services = () => {
       link: "/om"
     },
     {
-      title: 'Electrical Services',
+      title: 'Instrumentation Services',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_TL3L9MBpjEds4qVkIzGmBX4dNzG0I0XGeg&s',
-      link: "/civilconstruction"
+      link: "/Instrumentation"
     },
     {
-      title: ' Instrumentation Services',
+      title: ' Electrical Services',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTte8ZOtfehxf9J4Lr7h60LtKt61xInSzM12g&s',
       link: "/electrical"
     },
@@ -37,16 +37,16 @@ const Services = () => {
   return (
     <div>
       <Header />
-      <div className="modern-services-container">
-        <h1 className="modern-services-title">Our Services</h1>
-        <div className="modern-services-grid">
+      <div className="modern-services-container1">
+        <h1 className="modern-services-title1">OUR SERVICES</h1>
+        <div className="modern-services-grid1">
           {services.map((service, index) => (
-            <Link to={service.link} className="modern-service-card" key={index}>
-              <div className="modern-card-image">
-                <img src={service.image} alt={service.title} className="modern-img" />
+            <Link to={service.link} className="modern-service-card1" key={index}>
+              <div className="modern-card-image1">
+                <img src={service.image} alt={service.title} className="modern-img1" />
               </div>
-              <div className="modern-card-text">
-                <h2 className="modern-service-name">{service.title}</h2>
+              <div className="modern-card-text1">
+                <h2 className="modern-service-name1">{service.title}</h2>
               </div>
             </Link>
           ))}

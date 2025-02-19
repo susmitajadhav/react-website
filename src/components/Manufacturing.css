@@ -1,185 +1,64 @@
-/* ==== PROFESSIONAL DESIGN ==== */
-.machinery-container {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 50px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  font-family: "Poppins", sans-serif;
-  animation: fadeIn 1.2s ease-in-out;
-}
+/* src/components/Manufacturing.css */
 
-/* ==== HEADINGS ==== */
-h1, h2, h3 {
+.manufacturing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
-  font-weight: 700;
 }
 
-h1 {
-  font-size: 2.8em;
-  color: #1a1a1a;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-h1::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #0073e6;
-  margin: 10px auto;
-  border-radius: 2px;
-}
-
-.section-title {
-  font-size: 2.2em;
+.manufacturing-title {
+  font-size: 2.5rem;
+  font-weight: bold;
   color: #333;
-  margin-top: 40px;
-  position: relative;
+  margin-bottom: 20px;
 }
 
-.section-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #0073e6;
-  margin: 10px auto;
-  border-radius: 2px;
-}
-
-.sub-heading {
-  font-size: 1.6em;
-  color: #444;
-  margin-top: 30px;
-}
-
-/* ==== TEXT STYLES ==== */
-.description, .additional-info, .contact-info {
-  font-size: 1.2em;
-  line-height: 1.8;
+.manufacturing-description {
+  font-size: 1.2rem;
   color: #555;
-  text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
-/* ==== IMAGE SECTION ==== */
-.image-section {
-  text-align: center;
-  margin: 40px 0;
+.manufacturing-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-.machinery-image {
-  width: 100%;
-  max-width: 800px;
+.manufacturing-image {
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.machinery-image:hover {
-  transform: scale(1.05);
+.manufacturing-subheading {
+  font-size: 1.8rem;
+  color: #222;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
-/* ==== LIST STYLING ==== */
-.equipment-list ul, .feature-list {
-  list-style: none;
-  padding: 0;
+.manufacturing-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.equipment-list li, .feature-list li {
-  font-size: 1.1em;
-  color: #333;
-  margin: 12px 0;
-  display: flex;
-  align-items: center;
-  line-height: 1.6;
-  transition: all 0.3s ease-in-out;
+.manufacturing-list li {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 10px;
 }
 
-.equipment-list li strong {
+.manufacturing-contact {
+  font-size: 1.2rem;
   color: #0073e6;
-}
-
-.equipment-list li:hover, .feature-list li:hover {
-  transform: translateX(8px);
-}
-
-/* ==== CONTACT INFO ==== */
-.contact-info {
-  font-size: 1.2em;
   font-weight: bold;
-  color: #0073e6;
-  text-align: center;
   margin-top: 30px;
-}
-
-/* ==== RESPONSIVE DESIGN ==== */
-@media (max-width: 1024px) {
-  .machinery-container {
-    padding: 40px;
-  }
-  h1 {
-    font-size: 2.5em;
-  }
-  .description, .additional-info {
-    font-size: 1.1em;
-  }
-}
-
-@media (max-width: 768px) {
-  .image-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 250px; /* Set a fixed height for consistency */
-  }
-
-  .machinery-image {
-    height: 100%; /* Make sure the image fills the container */
-    width: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Prevent overflow */
-    object-fit: cover; /* Ensures the image fills the space properly */
-  }
-
-  .machinery-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures balanced spacing */
-    min-height: 100vh; /* Adjust height to fill the screen */
-  }
-}
-
-
-@media (max-width: 480px) {
-  .machinery-container {
-    padding: 20px;
-  }
-  h1 {
-    font-size: 2em;
-  }
-  .description, .additional-info, .contact-info {
-    font-size: 1em;
-  }
-}
-
-/* ==== ANIMATIONS ==== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
 }

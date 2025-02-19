@@ -1,5 +1,5 @@
 /* Main Container */
-.modern-services-container {
+.modern-services-container1 {
   text-align: center;
   margin: 20px auto;
   
@@ -10,7 +10,7 @@
 }
 
 /* Title */
-.modern-services-title {
+.modern-services-title1 {
   font-size: 42px;
   font-weight: bold;
   text-align: center;
@@ -21,7 +21,7 @@
 }
 
 /* Animated underline */
-.modern-services-title::after {
+.modern-services-title1::after {
   content: '';
   width: 100px;
   height: 4px;
@@ -33,7 +33,7 @@
 }
 
 /* Grid Layout */
-.modern-services-grid {
+.modern-services-grid1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -41,13 +41,14 @@
   padding: 20px;
 }
 
-.modern-service-name h2{
-font-size: 20px;
-text-transform: lowercase;
+.modern-service-name1 {
+  font-size: 23px !important;
+text-transform: none;
 }
 
+
 /* Card Styling */
-.modern-service-card {
+.modern-service-card1 {
  
   height: 360px;
   border-radius: 15px;
@@ -61,19 +62,19 @@ text-transform: lowercase;
 }
 
 /* Hover Animation */
-.modern-service-card:hover {
+.modern-service-card1:hover {
   transform: scale(1.05);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
   border-color: rgba(3, 78, 252, 0.8);
 }
 
 /* Image */
-.modern-card-image {
+.modern-card-image1 {
   width: 100%;
   height: 75%;
 }
 
-.modern-img {
+.modern-img1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -81,7 +82,7 @@ text-transform: lowercase;
 }
 
 /* Title */
-.modern-card-text {
+.modern-card-text1 {
   width: 100%;
   height: 25%;
   
@@ -96,13 +97,13 @@ text-transform: lowercase;
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .modern-services-grid {
+  .modern-services-grid1 {
       grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .modern-services-grid {
+  .modern-services-grid1{
       grid-template-columns: 1fr;
   }
 }

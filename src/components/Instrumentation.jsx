@@ -3,7 +3,7 @@ import "./ConsultancyServices.css"; // Using the same CSS file for consistency
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Electrical = () => {
+const Instrumentation = () => {
   return (
     <div>
       <Header />
@@ -19,7 +19,7 @@ const Electrical = () => {
 
         {/* Information Section */}
         <div className="info-container1 slide-in">
-          <h1 className="consultancy_title"> Electrical Services</h1>
+          <h1 className="consultancy_title"> Instrumentation Services</h1>
           <p className="consultancy_description">
             We provide a wide range of Electrical & Instrumentation services, including:
           </p>
@@ -42,4 +42,4 @@ const Electrical = () => {
   );
 };
 
-export default Electrical;
+export default Instrumentation;

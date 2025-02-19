@@ -123,9 +123,10 @@ const ContactPage = () => {
             {/* Register Office */}
             <div className="map-box animated-fade">
               <h3>🏢 Register Office</h3>
-              <p>123, Corporate Avenue, Mumbai, India</p>
-              <p>📞 +91 98765 43210 | 📠 Fax: +91 98765 43211</p>
-              <p>📧 Email: register@company.com</p>
+              <p>Flat No.101,Vrundavan Appartment,Near Kusumgandh Garden,</p>
+              <p>Pradhyapak Colony,Mahadevnagar,Uran Islampur 415409</p>
+              <p>📞 +91 98765 43210 </p>
+              <p>📧 Email: officesavtech@gmail.com</p>
               <iframe
                 src="https://maps.google.com/maps?q=Mumbai&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 allowFullScreen
@@ -135,9 +136,10 @@ const ContactPage = () => {
             {/* Branch Office */}
             <div className="map-box animated-fade">
               <h3>🏢 Branch Office</h3>
-              <p>456, Business Tower, Delhi, India</p>
-              <p>📞 +91 87654 32109 | 📠 Fax: +91 87654 32110</p>
-              <p>📧 Email: branch@company.com</p>
+              <p>Add. Plot No. 27/18,Kalanagar,</p>
+              <p>Sangli,Maharashtra 416416</p>
+              <p>📞 9850827966 , 7057104851 , 953613890 </p>
+              <p>📧 Email: officesavtech@gmail.com</p>
               <iframe
                 src="https://maps.google.com/maps?q=Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 allowFullScreen
@@ -147,9 +149,10 @@ const ContactPage = () => {
             {/* Manufacturing Office */}
             <div className="map-box animated-fade">
               <h3>🏭 Manufacturing Office</h3>
-              <p>789, Industrial Park, Bangalore, India</p>
-              <p>📞 +91 76543 21098 | 📠 Fax: +91 76543 21099</p>
-              <p>📧 Email: manufacturing@company.com</p>
+              <p>Add. Plot No. 27/18,Kalanagar,</p>
+              <p>Sangli,Maharashtra 416416</p>
+              <p>📞 +91 76543 21098 </p>
+              <p>📧 Email: officesavtech@gmail.com</p>
               <iframe
                 src="https://maps.google.com/maps?q=Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 allowFullScreen
