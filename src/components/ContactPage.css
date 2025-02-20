@@ -143,7 +143,7 @@ textarea:focus {
   margin-bottom: 20px;
 }
 .map-box p {
-  font-size: 0.7rem; /* Adjust the size as needed */
+  font-size: 0.9rem; /* Adjust the size as needed */
   line-height: 1.4; /* Improve readability */
   color: #333; /* Op margin-bottom: 5px;*/
 }
@@ -209,6 +209,10 @@ textarea:focus {
    
   }
 
+  .map-box p {
+    font-size: 0.7rem!important; /* Adjust the size as needed */
+    line-height: 1.4; /* Improve readability */
+  }
   .map-grid {
     flex-direction: column;
   }
