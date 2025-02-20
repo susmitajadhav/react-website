@@ -126,24 +126,23 @@ const Projects = () => {
         </motion.div>
       </section>
 
-      {/* Meet Our People Section */}
       <section className="meet-our-people">
-        <h2 data-aos="fade-up">Meet Our People</h2>
-        <div className="team-container">
-          {teamMembers.map((member) => (
-            <motion.div
-              key={member.id}
-              className="team-card"
-              whileHover={{ scale: 1.05 }}
-              data-aos="zoom-in"
-            >
-              <img src={member.photo} alt={member.name} className="team-photo" />
-              <h3>{member.name}</h3>
-              <p className="team-position">{member.position}</p>
-              <p className="team-intro">{member.intro}</p>
-            </motion.div>
-          ))}
-        </div>
+      <h2 data-aos="fade-up">Meet Our People</h2>
+      <div className="team-container">
+        {teamMembers.map((member) => (
+          <motion.div
+            key={member.id}
+            className="team-card"
+            whileHover={{ scale: 1.05 }}
+            data-aos="zoom-in"
+          >
+            <img src={member.photo} alt={member.name} className="team-photo" />
+            <h3>{member.name}</h3>
+            <p className="team-position">{member.position}</p>
+            <p className="team-intro">{member.intro}</p>
+          </motion.div>
+        ))}
+      </div>
       </section>
     </>
   );
