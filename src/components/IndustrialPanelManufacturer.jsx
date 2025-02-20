@@ -32,11 +32,12 @@ function IndustrialPanelManufacturer() {
       <Header />
       <div className="industrial-panel-container">
         <h1 className="main-heading">Industrial Panel Manufacturer</h1>
-        <p className="description_panel">
-          Harnessing engineering expertise, we specialize in the meticulous design and manufacturing of Power Control Centers (PCC), 
-          Motor Control Centers (MCC), Variable Frequency Drive (VFD), and Programmable Logic Controller (PLC) panels. 
+        <p className="panel-description-text">
+          Harnessing engineering expertise, we specialize in the meticulous design and manufacturing of Power Control Centers (PCC),
+          Motor Control Centers (MCC), Variable Frequency Drive (VFD), and Programmable Logic Controller (PLC) panels.
           Our precision-crafted solutions ensure optimal performance, reliability, and seamless integration across diverse industrial applications.
         </p>
+
 
         {/* Animated Cards Section */}
         <div className="panel-cards">
