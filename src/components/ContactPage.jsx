@@ -54,7 +54,7 @@ const ContactPage = () => {
             <div className="contact-card">
               <h2>🏢 Register Office</h2>
               <ul>
-                <li>📍 Address: 456 Corporate Tower, Main Street, Mumbai, India</li>
+                <li>📍 Flat No.101, Vrundavan Apartment, Near Kusumgandh Garden,Pradhyapak Colony, Mahadevnagar, Uran Islampur 415409</li>
                 <li>📞 Phone: +91 98765 43210</li>
                 <li>📠 Fax: +91 98765 43211</li>
                 <li>📧 Email: register@company.com</li>
