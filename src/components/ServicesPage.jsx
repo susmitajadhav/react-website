@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Services.css';
-import Footer from './Footer';
-import Header from './Header';
+
 
 const Services = () => {
   const services = [
@@ -40,8 +39,7 @@ const Services = () => {
   ];
 
   return (
-    <div>
-      <Header />
+   
       <div className="modern-services-container1">
         <h1 className="modern-services-title1">OUR SERVICES</h1>
         <div className="modern-services-grid1">
@@ -57,8 +55,7 @@ const Services = () => {
           ))}
         </div>
       </div>
-      <Footer />
-    </div>
+    
   );
 };
 
