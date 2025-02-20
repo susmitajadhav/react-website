@@ -150,8 +150,8 @@ h3:hover {
 
 /* Features & Applications - Side by Side on Large Screens */
 .features-applications-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
     gap: 40px;
     max-width: 800px;
     margin: auto;
@@ -177,7 +177,7 @@ h3:hover {
 
 /* Responsive */
 /* ✅ Responsive Fix for Tablets (Max Width: 768px) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px)  {
     .panel-cards {
         flex-direction: column !important; /* Stack cards vertically */
         align-items: center !important; /* Center align */
@@ -189,19 +189,14 @@ h3:hover {
     }
 
     .features-applications-container {
-       flex: none!important;
-        
+        display: block!important; /* Remove flex/grid */
+    }
 
     .features-list, .applications-list {
         width: 100%;
+        margin-bottom: 20px; /* Add spacing between sections */
     }
 }
 
-/* ✅ Responsive Fix for Mobile Screens (Max Width: 480px) */
-@media screen and (max-width: 480px) {
-    .panel-card {
-        width: 100% !important; /* Full width */
-        max-width: 350px !important; /* Limit max width */
-    }
-}
+
 

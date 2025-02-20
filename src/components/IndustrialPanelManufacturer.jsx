@@ -1,5 +1,5 @@
 import React from 'react';
-import './industrialPanelStyles.css'; // Custom CSS file
+import './industrialPanelStyles.css'; // Ensure correct path
 import Footer from './Footer';
 import Header from './Header';
 
@@ -50,7 +50,8 @@ function IndustrialPanelManufacturer() {
           ))}
         </div>
 
-        <div className="features-applications-container">
+        <div className="features-applications-container" style={{ display: "block !important" }}>
+
           <div>
             <h2 className="sub-heading">Key Features & Benefits:</h2>
             <ul className="features-list">
