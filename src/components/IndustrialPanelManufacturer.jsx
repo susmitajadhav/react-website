@@ -50,24 +50,30 @@ function IndustrialPanelManufacturer() {
           ))}
         </div>
 
-        <h2 className="sub-heading">Key Features & Benefits:</h2>
-        <ul className="features-list">
-          <li><strong>Seamless Integration:</strong> Our panels integrate effortlessly into existing industrial systems.</li>
-          <li><strong>Precision Engineering:</strong> Crafted with high precision to ensure top-notch performance.</li>
-          <li><strong>Reliability:</strong> Built for long-lasting durability, even in harsh environments.</li>
-          <li><strong>Energy Efficiency:</strong> Designed to minimize energy consumption.</li>
-          <li><strong>Customization:</strong> Tailored solutions for your specific requirements.</li>
-        </ul>
+        <div className="features-applications-container">
+          <div>
+            <h2 className="sub-heading">Key Features & Benefits:</h2>
+            <ul className="features-list">
+              <li><strong>Seamless Integration:</strong> Our panels integrate effortlessly into existing industrial systems.</li>
+              <li><strong>Precision Engineering:</strong> Crafted with high precision to ensure top-notch performance.</li>
+              <li><strong>Reliability:</strong> Built for long-lasting durability, even in harsh environments.</li>
+              <li><strong>Energy Efficiency:</strong> Designed to minimize energy consumption.</li>
+              <li><strong>Customization:</strong> Tailored solutions for your specific requirements.</li>
+            </ul>
+          </div>
 
-        <h3 className="sub-heading">Applications:</h3>
-        <ul className="applications-list">
-          <li>Sugar plants</li>
-          <li>CO-Generation Plants</li>
-          <li>Distillery & Ethanol Plants</li>
-          <li>Water Treatment Plants</li>
-          <li>HVAC Systems</li>
-          <li>Oil & Gas Industry</li>
-        </ul>
+          <div>
+            <h3 className="sub-heading">Applications:</h3>
+            <ul className="applications-list">
+              <li>Sugar plants</li>
+              <li>CO-Generation Plants</li>
+              <li>Distillery & Ethanol Plants</li>
+              <li>Water Treatment Plants</li>
+              <li>HVAC Systems</li>
+              <li>Oil & Gas Industry</li>
+            </ul>
+          </div>
+        </div>
 
         <p className="contact-info">
           For more information or inquiries, feel free to <strong>contact us</strong> today!
