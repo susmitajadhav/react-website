@@ -139,9 +139,15 @@ textarea:focus {
 }
 
 .map-box h3 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 10px;
 }
+.map-box p {
+  font-size: 0.7rem; /* Adjust the size as needed */
+  line-height: 1.4; /* Improve readability */
+  color: #333; /* Op margin-bottom: 5px;*/
+}
+
 
 .map-box iframe {
   width: 100%;
@@ -200,7 +206,7 @@ textarea:focus {
 @media (max-width: 1024px) {
   .contact-content {
     flex-direction: column;
-    align-items: center;
+   
   }
 
   .map-grid {
