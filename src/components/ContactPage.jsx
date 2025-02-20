@@ -55,10 +55,10 @@ const ContactPage = () => {
               <h2>🏢 Register Office</h2>
               <ul>
                 <li>📍 Flat No.101, Vrundavan Apartment, Near Kusumgandh Garden,Pradhyapak Colony, Mahadevnagar, Uran Islampur 415409</li>
-                <li>📞 Phone: +91 98765 43210</li>
-                <li>📠 Fax: +91 98765 43211</li>
-                <li>📧 Email: register@company.com</li>
-                <li>🕒 Working Hours: Mon - Fri, 9 AM - 6 PM</li>
+                <li>📞 Phone: 9850827966, 7057104851, 953613890 ,9503613890</li>
+                <li>📠 Fax: +91 9850827966</li>
+                <li>📧 Email:  officesavtech@gmail.com</li>
+                <li>🕒 Working Hours: Wed - MOn, 9 AM - 6 PM</li>
               </ul>
             </div>
           </div>
@@ -139,7 +139,7 @@ const ContactPage = () => {
               <h3>🏢 Branch Office</h3>
               <p>Plot No. 27/18, Kalanagar,</p>
               <p>Sangli, Maharashtra 416416</p>
-              <p>📞 9850827966, 7057104851, 953613890 </p>
+              <p>📞 9850827966, 7057104851, 953613890 ,9503613890</p>
               <p>📧 Email: officesavtech@gmail.com</p>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.344993479203!2d74.5790137!3d16.8711438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1234567890abc%3A0xabcdef123456789!2sKalanagar!5e0!3m2!1sen!2sin!4v1640000000000"
