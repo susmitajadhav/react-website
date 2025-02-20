@@ -24,6 +24,7 @@ import MechanicalEngineering from './components/MechanicalEngineering';
 import OM from './components/OM';
 import Electrical from './components/Electrical';
 import Instrumentation from './components/Instrumentation';
+import SupplyOfMachinery from './components/SupplyOfMachinary';
 
 const Home = () => {
   return (
@@ -76,7 +77,9 @@ const App = () => {
         <Route path="/om" element={<OM />} />
         <Route path="/electrical" element={<Electrical />} />
         <Route path="/Instrumentation" element={<Instrumentation />} />
-
+        <Route path="/ConsultancyServices" element={<ConsultancyServices />} />
+        <Route path="/supplyofmachinery" element={<SupplyOfMachinery />} />
+      
       </Routes>
     </Router>
   );

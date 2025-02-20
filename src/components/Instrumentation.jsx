@@ -21,20 +21,15 @@ const Instrumentation = () => {
         <div className="info-container1 slide-in">
           <h1 className="consultancy_title"> Instrumentation Services</h1>
           <p className="consultancy_description">
-            We provide a wide range of Electrical & Instrumentation services, including:
+            We provide a wide range of Instrumentation services, including:
           </p>
           <ul className="consultancy_list stylish-list">
-            <li>⚡ Turnkey Electrical Equipment Erection Work</li>
-            <li>🔧 Electrical Panel Erection Work with Cable Laying & Termination</li>
-            <li>🛠️ Electrical Panels & VFD Panels Overhauling</li>
-            <li>🔩 Alternator Overhauling</li>
-            <li>⚙️ L.T./H.T. Motors Overhauling</li>
-            <li>💡 CO<sub>2</sub> Cleaning & Relay Testing Work for L.T. and H.T. Switch Yards & Panels</li>
-            <li>📡 Field Instrumentation Erection, Cable Laying & Termination Work</li>
+            <li>🤖 Turnkey PLC and DCS-based Automation System</li>
+            <li>🛠️ Total Field Instrumentation Supply, Erection, Cable Laying, and Termination Work</li>
+            <li>⚙️ Troubleshooting and Upgradation of PLC, DCS System</li>
+
           </ul>
-          <p className="consultancy_additional-info">
-            Our expert team ensures precision, safety, and reliability in all electrical and instrumentation services to meet industry standards.
-          </p>
+
         </div>
       </div>
       <Footer />

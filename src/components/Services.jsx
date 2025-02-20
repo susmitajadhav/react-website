@@ -32,6 +32,11 @@ const Services = () => {
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTte8ZOtfehxf9J4Lr7h60LtKt61xInSzM12g&s',
       link: "/electrical"
     },
+    {
+      title: 'Supply of Machinery',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPzD5UjjOv5i3YfR1FwE1f7HtjszE2mJx09A&s',
+      link: "/supplyofmachinery"
+    }
   ];
 
   return (

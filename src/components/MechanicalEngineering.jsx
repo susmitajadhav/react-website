@@ -24,6 +24,8 @@ const MechanicalEngineering = () => {
             We provide a wide range of mechanical services, including:
           </p>
           <ul className="consultancy_list stylish-list">
+            <li>⚙️ Turbo Generator & Diesel Generator Erection Work</li>
+            <li>🛠️ Sand Blasting of Turbine Rotors</li>
             <li>🔧 New Project Turnkey Erection & Commissioning Work</li>
             <li>⚙️ Light & Heavy Fabrication Work (M.S. & S.S. Both)</li>
             <li>

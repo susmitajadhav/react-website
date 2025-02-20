@@ -37,6 +37,7 @@ const ConsultancyServices = () => {
                         <li>Design & Drawings Preparation and Approval</li>
                         <li>Stage-wise Machinery Inspection & Erection Work</li>
                         <li>Expansion, Upgradation, & Modernization of Existing Plants</li>
+                        <li>Preparation of  financial vibality</li>
                     </ul>
                     <p className="consultancy_additional-info">
                         With years of experience and expertise, we help you achieve operational efficiency and ensure the highest standards of quality for your projects.

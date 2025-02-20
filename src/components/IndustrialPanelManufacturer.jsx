@@ -46,7 +46,10 @@ function IndustrialPanelManufacturer() {
         <h4 className="sub-heading">Applications:</h4>
         <div className="content-list">
           <ul>
-            <li>Manufacturing Plants</li>
+            <li>Sugar plants</li>
+            <li>CO-Generation Plants</li>
+            <li>Jaggery and Khandsari Plants</li>
+            <li>Distillery & Ethanol Plants</li>
             <li>Energy and Power Sector</li>
             <li>Automation and Control Systems</li>
             <li>Water Treatment Plants</li>

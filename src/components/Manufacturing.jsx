@@ -39,7 +39,7 @@ function Manufacturing() {
 
         <h3 className="manufacturing-subheading">Key Features of Our Machinery:</h3>
         <ul className="manufacturing-list">
-          <li>High efficiency in sugar extraction and boiling process.</li>
+          <li>High efficiency in sugar extraction and boiling house process equipment results in increase in sugar requiry and reducing steam consumption.</li>
           <li>Durability and long life of all parts and components.</li>
           <li>Easy to maintain and replace spares.</li>
           <li>Energy-efficient designs reducing operational costs.</li>

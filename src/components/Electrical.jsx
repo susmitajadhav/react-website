@@ -25,12 +25,15 @@ const Electrical = () => {
           </p>
           <ul className="consultancy_list stylish-list">
             <li>⚡ Turnkey Electrical Equipment Erection Work</li>
-            <li>🔧 Electrical Panel Erection Work with Cable Laying & Termination</li>
+            <li>🔌 Electrical Panel Erection Work with Cable Laying & Termination</li>
             <li>🛠️ Electrical Panels & VFD Panels Overhauling</li>
             <li>🔩 Alternator Overhauling</li>
             <li>⚙️ L.T./H.T. Motors Overhauling</li>
-            <li>💡 CO<sub>2</sub> Cleaning & Relay Testing Work for L.T. and H.T. Switch Yards & Panels</li>
+            <li>🌀 CO<sub>2</sub> Cleaning of Alternators & H.T. Motors</li>
+            <li>🔎 Relay Testing Work for L.T. and H.T. Switch Yards & Panels</li>
             <li>📡 Field Instrumentation Erection, Cable Laying & Termination Work</li>
+            <li>⚡ Power Analysis of L.T./H.T. Circuit to Reduce Electricity Consumption</li>
+
           </ul>
           <p className="consultancy_additional-info">
             Our expert team ensures precision, safety, and reliability in all electrical and instrumentation services to meet industry standards.
