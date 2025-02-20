@@ -123,45 +123,47 @@ const ContactPage = () => {
             {/* Register Office */}
             <div className="map-box animated-fade">
               <h3>🏢 Register Office</h3>
-              <p>Flat No.101,Vrundavan Appartment,Near Kusumgandh Garden,</p>
-              <p>Pradhyapak Colony,Mahadevnagar,Uran Islampur 415409</p>
+              <p>Flat No.101, Vrundavan Apartment, Near Kusumgandh Garden,</p>
+              <p>Pradhyapak Colony, Mahadevnagar, Uran Islampur 415409</p>
               <p>📞 +91 98765 43210 </p>
               <p>📧 Email: officesavtech@gmail.com</p>
               <iframe
-                src="https://maps.google.com/maps?q=Mumbai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.344993479203!2d74.2666605!3d17.0558593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1234567890abc%3A0xabcdef123456789!2sVrundavan%20Apartment!5e0!3m2!1sen!2sin!4v1640000000000"
                 allowFullScreen
+                loading="lazy"
               ></iframe>
             </div>
 
             {/* Branch Office */}
             <div className="map-box animated-fade">
               <h3>🏢 Branch Office</h3>
-              <p>Add. Plot No. 27/18,Kalanagar,</p>
-              <p>Sangli,Maharashtra 416416</p>
-              <p>📞 9850827966 , 7057104851 , 953613890 </p>
+              <p>Plot No. 27/18, Kalanagar,</p>
+              <p>Sangli, Maharashtra 416416</p>
+              <p>📞 9850827966, 7057104851, 953613890 </p>
               <p>📧 Email: officesavtech@gmail.com</p>
               <iframe
-                src="https://maps.google.com/maps?q=Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.344993479203!2d74.5790137!3d16.8711438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1234567890abc%3A0xabcdef123456789!2sKalanagar!5e0!3m2!1sen!2sin!4v1640000000000"
                 allowFullScreen
+                loading="lazy"
               ></iframe>
             </div>
 
             {/* Manufacturing Office */}
             <div className="map-box animated-fade">
               <h3>🏭 Manufacturing Office</h3>
-              <p>Add. Plot No. 27/18,Kalanagar,</p>
-              <p>Sangli,Maharashtra 416416</p>
+              <p>Plot No. 27/18, Kalanagar,</p>
+              <p>Sangli, Maharashtra 416416</p>
               <p>📞 +91 76543 21098 </p>
               <p>📧 Email: officesavtech@gmail.com</p>
               <iframe
-                src="https://maps.google.com/maps?q=Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.344993479203!2d74.5790137!3d16.8711438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1234567890abc%3A0xabcdef123456789!2sKalanagar!5e0!3m2!1sen!2sin!4v1640000000000"
                 allowFullScreen
+                loading="lazy"
               ></iframe>
             </div>
 
           </div>
         </div>
-
       </div>
       <Footer />
     </div>
