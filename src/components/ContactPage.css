@@ -21,7 +21,7 @@
 }
 
 .contact-header p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #555;
   opacity: 0;
   animation: fadeIn 1.2s ease-in-out forwards;
@@ -140,7 +140,7 @@ textarea:focus {
 
 .map-box h3 {
   font-size: 1.6rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .map-box p {
   font-size: 0.7rem; /* Adjust the size as needed */
