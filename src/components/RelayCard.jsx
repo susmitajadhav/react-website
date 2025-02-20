@@ -1,50 +1,64 @@
 import React from 'react';
-import './RelayCard.css'; // Import the custom CSS file
-import Header from './Header'; // Assuming Header component exists
-import Footer from './Footer'; // Assuming Footer component exists
+import './RelayCard.css'; // Updated CSS file name
+import Header from './Header';
+import Footer from './Footer';
+import { FaCheckCircle } from 'react-icons/fa'; // Import modern icons
 
-function RelayCard() {
+function PLCDCSSystem() {
   return (
     <div>
       <Header />
-      <div className="relay-card-container">
-        <h1 className="main-heading">Multi-channel AC/DC Relay Cards</h1>
-        <p className="description">
-          Discover our Multi-channel AC/DC relay cards at <strong>SAV-Tech Associate</strong>, providing versatile solutions for efficient electrical control.
-          These relay cards offer multiple channels to meet the diverse needs of modern applications.
-        </p>
+      <div className="plc-dcs-container">
+        <h1 className="plc-dcs-main-heading">PLC & DCS System</h1>
 
-        <div className="image-section">
-          <img 
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDEtSZzcR4It0FBfOAf8XYmN2ZHF8I0wwsfw&s"
-            alt="Relay Card"
-            className="relay-card-image"
-          />
+        {/* Image & Description Section */}
+        <div className="plc-dcs-content">
+          <div className="plc-dcs-text">
+            <p>
+              At <strong>SAV-Tech Associate</strong>, we offer cutting-edge <strong>PLC & DCS Systems</strong> designed for industrial automation, ensuring high performance and efficiency in electrical control systems.
+            </p>
+            <p>
+              Our solutions enhance <strong>automation, scalability, and real-time processing</strong>, ensuring reliable performance for various industries.
+            </p>
+          </div>
+          <div className="plc-dcs-image-container">
+            <img 
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDEtSZzcR4It0FBfOAf8XYmN2ZHF8I0wwsfw&s"
+              alt="PLC & DCS System"
+              className="plc-dcs-image"
+            />
+          </div>
         </div>
 
-        <h2 className="sub-heading">Features & Benefits</h2>
-        <ul className="features-list">
-          <li><strong>Multi-channel Support:</strong> Control multiple devices with a single unit.</li>
-          <li><strong>Versatile Integration:</strong> Seamlessly integrates with various automation systems.</li>
-          <li><strong>Optimal Performance:</strong> Provides stable and reliable operation.</li>
-          <li><strong>Precision Engineering:</strong> High-quality manufacturing for top-tier reliability.</li>
-          <li><strong>Energy Efficient:</strong> Reduces power consumption with optimized performance.</li>
-          <li><strong>Customizable Design:</strong> Tailored for specific industrial applications.</li>
-        </ul>
+        {/* Features & Applications Section */}
+        <div className="plc-dcs-details">
+          {/* Features */}
+          <div className="plc-dcs-features">
+            <h2 className="plc-dcs-sub-heading">Features & Benefits</h2>
+            <ul className="plc-dcs-features-list">
+              <li><FaCheckCircle className="plc-dcs-icon" /> High Automation & Control</li>
+              <li><FaCheckCircle className="plc-dcs-icon" /> Scalable & Future-Ready</li>
+              <li><FaCheckCircle className="plc-dcs-icon" /> Real-Time Data Processing</li>
+              <li><FaCheckCircle className="plc-dcs-icon" /> Industrial-Grade Reliability</li>
+              <li><FaCheckCircle className="plc-dcs-icon" /> Energy-Efficient Solutions</li>
+            </ul>
+          </div>
 
-        <h3 className="sub-heading">Applications</h3>
-        <p className="description">
-          Our Multi-channel Relay Cards are ideal for:
-        </p>
-        <ul className="content-list">
-          <li>Industrial Automation</li>
-          <li>Building Management Systems</li>
-          <li>Energy Management</li>
-          <li>Automated Control Systems</li>
-        </ul>
+          {/* Applications */}
+          <div className="plc-dcs-applications">
+            <h2 className="plc-dcs-sub-heading">Applications</h2>
+            <ul className="plc-dcs-applications-list">
+              <li>Manufacturing Automation</li>
+              <li>Power Plants & Smart Grids</li>
+              <li>Oil & Gas Industry</li>
+              <li>Water Treatment Plants</li>
+            </ul>
+          </div>
+        </div>
 
-        <p className="contact-info">
-          📞 <strong>Contact us</strong> today for more details and inquiries!
+        {/* Contact Information */}
+        <p className="plc-dcs-contact-info">
+          📞 <strong>Contact us</strong> today to learn more about our automation solutions!
         </p>
       </div>
       <Footer />
@@ -52,4 +66,4 @@ function RelayCard() {
   );
 }
 
-export default RelayCard;
+export default PLCDCSSystem;
