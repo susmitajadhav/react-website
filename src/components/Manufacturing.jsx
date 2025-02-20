@@ -103,7 +103,7 @@ const Manufacturing = () => {
         <h3 className="manufacturing-subheading">Key Features of Our Machinery:</h3>
         <ul className="manufacturing-list">
           <motion.li whileHover={{ scale: 1.05 }}>
-            ⚙️ <strong>High efficiency:</strong> Improves sugar extraction and reduces steam consumption.
+            ⚙️ <strong>High efficiency:</strong> Improves sugar extraction and boiling house process equipment results in increase in sugar requiry and reduces steam consumption.
           </motion.li>
           <motion.li whileHover={{ scale: 1.05 }}>
             🛠️ <strong>Durability:</strong> Long-lasting parts and components.
