@@ -4,8 +4,6 @@
   overflow-x: hidden;
 }
 
-
-/* Section Headings Styling */
 /* Section Headings Styling */
 .meet-our-people_about h2,
 .about h2,
@@ -18,6 +16,7 @@
   font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 /* About Us & Why Choose Us Section Side by Side */
@@ -30,22 +29,15 @@
   flex-wrap: wrap;
 }
 
-.about, .why-choose {
+.about,
+.why-choose {
   flex: 1;
-  
   padding: 30px;
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
-
-/* Remove Animation */
-.about[data-aos], .why-choose[data-aos] {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
 
 /* Mission & Vision Section Side by Side */
 .mission-vision-container {
@@ -57,46 +49,43 @@
   flex-wrap: wrap;
 }
 
-.mission, .vision {
+.mission,
+.vision {
   flex: 1;
-
   padding: 30px;
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  
 }
 
-/* Remove Animation */
-.mission[data-aos], .vision[data-aos] {
-  opacity: 1 !important;
-  transform: none !important;
+/* Remove Animation on Small Screens */
+@media (max-width: 768px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
-
-
+/* Main About Us Container */
 .about-us-container {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #f3f3f3, #e6e6e6);
   padding: 40px 20px;
   text-align: center;
   color: #333;
-  
   margin: 10px;
 }
 
-.section {
-  background: white;
-  padding: 40px;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Team Section */
+.team-section {
+  text-align: center;
+  padding: 40px 20px;
 }
 
-/* Team Section */
 .team-container_about {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 cards in a row */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   justify-content: center;
   max-width: 1300px;
@@ -109,7 +98,6 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 220px;
 }
 
 .team-photo_about {
@@ -139,6 +127,7 @@
   font-size: 2rem;
   color: #048038;
 }
+
 /* Why Choose Us Section */
 .why-choose ul {
   list-style: none;
@@ -160,15 +149,10 @@
   font-size: 1.2rem;
 }
 
-
 /* Responsive Design */
 @media (max-width: 1024px) {
   .about-us-container {
     padding: 20px;
-  }
-  .team-container_about {
-  
-    align-items: center;
   }
 }
 
@@ -176,20 +160,65 @@
   .section {
     padding: 20px;
   }
-  .team-card_about {
-    width: 90%;
-  }
+ 
+
+  .meet-our-people_about h2,
+.about h2,
+.mission h2,
+.vision h2,
+.why-choose h2,
+.pillars h2 {
+  color: #048038;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+}meet-our-people_about h2,
+.about h2,
+.mission h2,
+.vision h2,
+.why-choose h2,
+.pillars h2 {
+  
+
+  font-size: 1.3rem!important;
+  
+}
 }
 
+/* 🌟 Major Fix: Team & Intro Positioning at Small Screens */
 @media (max-width: 480px) {
+  .team-container_about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card_about {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
   .pillars-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
+
   .why-choose ul li {
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
+  }
+
+  .about p,
+  .mission p,
+  .vision p,
+  .why-choose ul li,
+  .pillars-grid .pillar-card p {
+    font-size: 15px;
+    text-align: center; /* Centers the text for better readability */
   }
 }
 
+/* 🌟 Extra Small Screens (320px and below) */
 @media (max-width: 320px) {
   .about-why-container,
   .mission-vision-container {
@@ -198,17 +227,28 @@
     padding: 10px;
   }
 
-  .about, .why-choose,
-  .mission, .vision {
-    width: 100%;
+  .about,
+  .why-choose,
+  .mission,
+  .vision {
+   
     padding: 15px;
   }
 
+  .about p,
+  .mission p,
+  .vision p,
+  .why-choose ul li,
+  .pillars-grid .pillar-card p {
+    font-size: 12px;
+    text-align: center; /* Centers the text for better readability */
+  }
+
   .team-container_about {
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 10px; /* Reduce gap for better spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 100%;
-    overflow: hidden;
   }
 
   .team-card_about {
@@ -216,9 +256,7 @@
     padding: 15px;
   }
 
-  .why-choose ul li {
-    font-size: 0.85rem;
-  }
+  
 
   .pillars-grid {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -234,26 +272,27 @@
   }
 }
 
-/* Responsive Adjustments */
+/* Adjust Team Grid Layout */
 @media (max-width: 1200px) {
   .team-container_about {
-    grid-template-columns: repeat(4, 1fr); /* 4 cards for smaller screens */
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 1024px) {
   .team-container_about {
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .team-container_about {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .team-container_about {
-    grid-template-columns: repeat(1, 1fr); /* 1 card per row */
-  }}
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
