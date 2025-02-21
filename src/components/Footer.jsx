@@ -12,56 +12,61 @@ const Footer = () => {
             <h4>SAV-Tech Associate</h4>
             <p>Innovative solutions for Sugar, Power Plant, Co-Generation, Distillery, Khandsar & Jaggery industries.</p>
             <div className="footer-contact">
-              <p><strong>Phone:</strong> 9422225058, 9011731731, 9822760005</p>
-              <p><strong>Email:</strong> info@nrfabricator.com</p>
-              <p><strong>Address:</strong> G-58, M.I.D.C, Ahmednagar, Maharashtra - 414111</p>
+              <p><strong>Phone:</strong> 9850827966, 7057104851, 953613890, 9503613890</p>
+              <p><strong>Email:</strong> officesavtech@gmail.com</p>
+              <p><strong>Address:</strong> Flat No.101, Vrundavan Apartment, Near Kusumgandh Garden,Pradhyapak Colony, Mahadevnagar, Uran Islampur 415409. </p>
             </div>
           </div>
 
           <div className="footer-right">
             <h4>Navigation</h4>
             <ul>
-            <li>
-              <Link to="/" onClick={() => setIsMenuOpen(false)}>
-              Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/aboutus" onClick={() => setIsMenuOpen(false)}>
-              About
-              </Link>
-            </li>
-            <li>
-              <Link to="/services" onClick={() => setIsMenuOpen(false)}>
-              Services
-              </Link>
-            </li>
-            <li>
-              <Link to="/contactpage" onClick={() => setIsMenuOpen(false)}>
-                Contact
-              </Link>
-            </li>
+              <li>
+                <Link to="/" onClick={() => setIsMenuOpen(false)}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/aboutus" onClick={() => setIsMenuOpen(false)}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" onClick={() => setIsMenuOpen(false)}>
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/product" onClick={() => setIsMenuOpen(false)}>
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link to="/contactpage" onClick={() => setIsMenuOpen(false)}>
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div className="footer-right">
             <h4>Projects</h4>
             <ul>
-            <li>
-              <Link to="/manufacturing" onClick={() => setIsMenuOpen(false)}>
-              Manufacturing of Machineries
-              </Link>
-            </li>
-            <li>
-              <Link to="/relay-card" onClick={() => setIsMenuOpen(false)}>
-                RelayCardact
-              </Link>
-            </li>
-            <li>
-              <Link to="/industrial-panel-manufacturer" onClick={() => setIsMenuOpen(false)}>
-              Industrial Panel Manufacturing
-              </Link>
-            </li>
+              <li>
+                <Link to="/manufacturing" onClick={() => setIsMenuOpen(false)}>
+                  Manufacturing of Machineries
+                </Link>
+              </li>
+              <li>
+                <Link to="/relay-card" onClick={() => setIsMenuOpen(false)}>
+                  RelayCardact
+                </Link>
+              </li>
+              <li>
+                <Link to="/industrial-panel-manufacturer" onClick={() => setIsMenuOpen(false)}>
+                  Industrial Panel Manufacturing
+                </Link>
+              </li>
             </ul>
             {/* Social Media Links Section */}
             <div className="footer-social">
