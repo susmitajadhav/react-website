@@ -1,6 +1,9 @@
 /* --------------------------------------- */
 /* 1. Universal Reset & Body Configuration */
 /* --------------------------------------- */
+/* Import Stylish Font */ 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -12,8 +15,6 @@ html, body {
   box-sizing: border-box;
 }
 
-/* Import Stylish Font */ 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
 
 /* --------------------------------------- */
 /* 2. Consultancy Container Styles         */
