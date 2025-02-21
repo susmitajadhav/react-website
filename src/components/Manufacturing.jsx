@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; 
 import { motion } from "framer-motion";
 import "./Manufacturing.css"; // Importing the CSS file
 import Header from "./Header";
@@ -61,8 +61,9 @@ const Manufacturing = () => {
               alt="Mill & Spares"
               className="card-image"
             />
-            <h3>Mill & its Spares</h3>
-            <p>We design and manufacture efficient mills and their spare parts for sugar extraction.</p>
+            {/* NEW CLASS HERE: mill-spares-heading */}
+            <h3 className="card-heading">Mill & its Spares</h3>
+            <p className="card-para" >We design and manufacture efficient mills and their spare parts for sugar extraction.</p>
           </motion.div>
 
           <motion.div
@@ -75,8 +76,8 @@ const Manufacturing = () => {
               alt="Boiling House Equipment"
               className="card-image"
             />
-            <h3>Boiling House Equipments & Spares</h3>
-            <p>High-quality equipment used in the boiling house for the production of sugar and jaggery.</p>
+            <h3 className="card-heading" >Boiling House Equipments & Spares</h3>
+            <p className="card-para"> High-quality equipment used in the boiling house for the production of sugar and jaggery.</p>
           </motion.div>
 
           <motion.div
@@ -89,13 +90,13 @@ const Manufacturing = () => {
               alt="Material Handling"
               className="card-image"
             />
-            <h3>Material Handling Systems & Spares</h3>
-            <p>Automated and manual material handling systems tailored for sugar and jaggery plants.</p>
+            <h3 className="card-heading" >Material Handling Systems & Spares</h3>
+            <p className="card-para">Automated and manual material handling systems tailored for sugar and jaggery plants.</p>
           </motion.div>
         </div>
 
         <h2 className="manufacturing-subheading">Machinery for Khandsari & Jaggery Plants</h2>
-        <p className="manufacturing-description">
+        <p  className="manufacturing-description">
           Our machinery is designed for the efficient extraction and processing of Khandsari and Jaggery.
           We offer robust systems that ensure long-term reliability and high performance.
         </p>
