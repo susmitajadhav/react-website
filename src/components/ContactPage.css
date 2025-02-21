@@ -1,4 +1,17 @@
-/* Contact Page Styling */
+/* ---------------- GLOBAL RESET & BOX-SIZING ---------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* ---------------- CONTACT PAGE STYLING ---------------- */
 .contact-page-container {
   width: 100%;
   max-width: 1700px;
@@ -7,7 +20,7 @@
   animation: fadeIn 1s ease-in-out;
 }
 
-/* Header Section */
+/* ---------------- HEADER SECTION ---------------- */
 .contact-header {
   text-align: center;
   margin-bottom: 40px;
@@ -28,7 +41,7 @@
   animation-delay: 0.3s;
 }
 
-/* Contact Section */
+/* ---------------- CONTACT SECTION ---------------- */
 .contact-content {
   display: flex;
   flex-wrap: wrap;
@@ -38,9 +51,10 @@
 }
 
 /* Contact Cards */
-.contact-details, .contact-form-wrapper {
+.contact-details,
+.contact-form-wrapper {
   flex: 1;
-  min-width: 320px;
+  /* min-width: 320px; <-- We'll override this below for small screens */
   margin: 10px;
 }
 
@@ -105,14 +119,20 @@ textarea:focus {
   background: #1be209;
 }
 
-/* Map Section */
+/* Status Message */
+.status-message {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #1c75d4;
+}
+
+/* ---------------- MAP SECTION ---------------- */
 .map-container {
   text-align: center;
-  
 }
 
 .map-container h2 {
-  font-size: 3rem!important;
+  font-size: 3rem !important;
   color: #086815;
 }
 
@@ -139,15 +159,16 @@ textarea:focus {
 }
 
 .map-box h3 {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   margin-bottom: 20px;
 }
-.map-box p {
-  font-size: 0.9rem; /* Adjust the size as needed */
-  line-height: 1.4; /* Improve readability */
-  color: #333; /* Op margin-bottom: 5px;*/
-}
 
+.map-box p {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: #333;
+  margin-bottom: 5px;
+}
 
 .map-box iframe {
   width: 100%;
@@ -156,10 +177,11 @@ textarea:focus {
   border-radius: 10px;
 }
 
+/* Contact Card List */
 .contact-card ul {
-  list-style: none; /* Removes bullet points */
-  padding: 0; /* Removes default padding */
-  margin: 0; /* Removes default margin */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .contact-card li {
@@ -169,8 +191,15 @@ textarea:focus {
   margin-bottom: 8px;
 }
 
+/* ---------------- ADDITIONAL CLASS EXAMPLE ---------------- */
+.contact_head {
+  font-size: 2rem; /* Adjust the font size */
+  color: #149b26;  /* Adjust the color */
+  text-align: center; /* Center align the text */
+  margin-bottom: 20px; /* Spacing below the element */
+}
 
-/* Animations */
+/* ---------------- ANIMATIONS ---------------- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -202,25 +231,41 @@ textarea:focus {
   }
 }
 
-/* Responsive Design */
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+
+/* Medium screens and below */
 @media (max-width: 1024px) {
   .contact-content {
     flex-direction: column;
-   
+    padding: 10px;
+  }
+  .contact_head {
+    font-size: 2.3rem;
   }
 
-  .map-box p {
-    font-size: 0.7rem!important; /* Adjust the size as needed */
-    line-height: 1.4; /* Improve readability */
+  .contact-card li {
+    font-size: 1.3rem;
   }
   .map-grid {
     flex-direction: column;
+    padding: 10px;
+  }
+
+  .map-box h3 {
+    font-size: 2.2rem;
+  }
+  .map-box p {
+    font-size: 1.5rem;
   }
 }
 
+/* Tablet and below */
 @media (max-width: 768px) {
   .contact-header h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
+  }
+  .contact-header p {
+    font-size: 1.4rem;
   }
 
   .contact-card {
@@ -232,24 +277,108 @@ textarea:focus {
   }
 
   .map-box {
-    width: 90%;
+    width: 100%;
+  }
+
+  .map-box h3 {
+    font-size: 1.9rem;
+  }
+  .map-box p {
+    font-size: 1.2rem;
   }
 }
 
+/* Small phones (max-width: 480px) */
 @media (max-width: 480px) {
   .contact-header h1 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+  }
+  .contact-header p {
+    font-size: 1.1rem;
   }
 
-  .contact-header p {
-    font-size: 1rem;
+  /* Reduce gap & padding to prevent overflow */
+  .contact-content {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  /* Override the min-width and margin on smaller devices */
+  .contact-details,
+  .contact-form-wrapper {
+    min-width: auto;
+    margin: 5px 0;
   }
 
   .contact-card {
     padding: 15px;
   }
 
+  .form-group input,
+  textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
   .map-box {
     width: 100%;
+  }
+
+  .map-box p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small devices (max-width: 360px) */
+@media (max-width: 360px) {
+  .contact-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact-header {
+    margin-bottom: 10px;
+  }
+  
+  .contact-header p {
+    font-size: 0.9rem;
+  }
+
+  .contact-card {
+    padding: 10px;
+  }
+
+  .contact_head {
+    font-size: 1.7rem;
+  }
+
+  .contact-card li {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  textarea {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .submit-btn {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .map-container h2 {
+    font-size: 1.9rem !important;
+  }
+
+  .map-box h3 {
+    font-size: 1.4rem;
+  }
+  .map-box p {
+    font-size: 0.8rem;
   }
 }
