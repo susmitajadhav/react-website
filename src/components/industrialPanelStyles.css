@@ -152,10 +152,9 @@ h3:hover {
 .features-applications-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 40px;
-    max-width: 800px;
-    margin: auto;
-    text-align: left;
+    gap: 80px;
+   
+    text-align:center;
     align-items: flex-start;
 }
 
@@ -195,6 +194,45 @@ h3:hover {
     .features-list, .applications-list {
         width: 100%;
         margin-bottom: 20px; /* Add spacing between sections */
+    }
+}
+
+@media screen and (max-width: 768px)  {
+    .panel-cards {
+        flex-direction: column !important; /* Stack cards vertically */
+        align-items: center !important; /* Center align */
+    }
+
+    .panel-card {
+        width: 90% !important; /* Take up most of the screen width */
+        max-width: 400px !important; /* Set max width for better layout */
+    }
+
+    .features-applications-container {
+        display: block!important; /* Remove flex/grid */
+    }
+
+    .features-list, .applications-list {
+        width: 100%;
+        margin-bottom: 20px; /* Add spacing between sections */
+    }
+
+    .main-heading {
+        font-size: 2rem;     
+    }
+    .sub-heading {
+        font-size: 1.3rem;
+    }
+    .features-list li, .applications-list li {
+        font-size: 0.9rem;
+    }
+
+    .contact-info {
+        font-size: 1rem;
+    }
+
+    .panel-description-text {
+        font-size: 1rem;
     }
 }
 
