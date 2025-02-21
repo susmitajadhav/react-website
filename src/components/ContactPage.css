@@ -134,6 +134,7 @@ textarea:focus {
 .map-container h2 {
   font-size: 3rem !important;
   color: #086815;
+  text-align: center; /* Center align the text */
 }
 
 .map-grid {
@@ -372,7 +373,7 @@ textarea:focus {
   }
 
   .map-container h2 {
-    font-size: 1.9rem !important;
+    font-size: 1.8rem !important;
   }
 
   .map-box h3 {
