@@ -2,7 +2,6 @@
 .modern-services-container1 {
   text-align: center;
   margin: 20px auto;
-  
   padding: 20px;
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #e0f7fa, #c2e9fb);
@@ -41,15 +40,18 @@
   padding: 20px;
 }
 
+/* Service Name Styling */
 .modern-service-name1 {
   font-size: 23px !important;
-text-transform: none;
+  text-transform: none;
+  color: #158347;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
 }
-
 
 /* Card Styling */
 .modern-service-card1 {
- 
   height: 360px;
   border-radius: 15px;
   overflow: hidden;
@@ -85,7 +87,6 @@ text-transform: none;
 .modern-card-text1 {
   width: 100%;
   height: 25%;
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +104,15 @@ text-transform: none;
 }
 
 @media (max-width: 768px) {
-  .modern-services-grid1{
+  .modern-services-grid1 {
       grid-template-columns: 1fr;
   }
+  .modern-service-name1 {
+    font-size: 20px !important;
+  }
+
+  .modern-services-title1 {
+    font-size: 28px;
+  }
+ 
 }

@@ -1,7 +1,7 @@
-/* WhatWeOffer.css */
+/* General Styles */
 .what-we-offer {
-  font-family:"Poppins",sans-serif;
-  padding: 30px 90px; /* Add padding on the sides for smaller screens */
+  font-family: "Poppins", sans-serif;
+  padding: 40px 60px;
   color: #333;
   background-color: #f4f4f9;
 }
@@ -9,7 +9,7 @@
 /* Intro Section */
 .intro-section {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   background-color: #004D9B;
   color: #fff;
   border-radius: 10px;
@@ -17,16 +17,15 @@
 }
 
 .intro-section h1 {
-  font-size: 46px;
+  font-size: 42px;
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 10px;
-  color: #fff;
-  text-shadow: 3px 3px 6px rgba(180, 175, 175, 0.3); /* Adds a smooth shadow */
+  text-shadow: 3px 3px 6px rgba(180, 175, 175, 0.3);
 }
 
 .intro-section p {
   font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
   line-height: 1.6;
   color: #ddd;
 }
@@ -34,9 +33,9 @@
 /* Features Grid */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 0 10px; /* Add padding for small screens */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  justify-items: center;
 }
 
 /* Feature Card */
@@ -48,6 +47,8 @@
   text-align: center;
   padding: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 400px;
 }
 
 .feature-card:hover {
@@ -63,67 +64,188 @@
 
 .feature-card h3 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
   color: #333;
+  margin-bottom: 10px;
 }
 
 .feature-card p {
   font-size: 1rem;
   color: #555;
+  line-height: 1.5;
 }
 
-/* Media Queries for Responsiveness */
+/* Info Section */
+.info-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f9f9f9, #eef1f5);
+}
 
-/* For tablets and small screens */
+.info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.info-content:hover {
+  transform: translateY(-5px);
+}
+
+.info-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.info-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.info-details {
+  flex: 1;
+  text-align: left;
+  min-width: 40%;
+}
+
+.info-details h2 {
+  font-size: 36px;
+  color: #00A84D;
+  text-align: center;
+}
+
+.info-details p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.info-details h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a3c4f;
+  margin-top: 30px;
+}
+
+.info-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info-details li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.info-details li::before {
+  content: '✔';
+  color: #1a3c4f;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .info-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .info-image {
+    margin-bottom: 20px;
+  }
+
+  .info-details {
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
-  .intro-section h1 {
-    font-size: 2rem; /* Adjust heading size */
+  .what-we-offer {
+    padding: 20px;
   }
 
-  .intro-section p {
-    font-size: 1rem; /* Adjust paragraph size */
+  .info-section {
+    padding: 50px 15px;
   }
 
   .features-grid {
-    gap: 15px; /* Reduce grid gap */
-  }
-
-  .feature-card {
-    padding: 15px; /* Reduce card padding */
-  }
-
-  .feature-card h3 {
-    font-size: 1.2rem; /* Adjust title size */
-  }
-
-  .feature-card p {
-    font-size: 0.9rem; /* Adjust text size */
+   padding: 10px;
+    gap: 60px;
   }
 }
 
-/* For mobile devices */
 @media (max-width: 480px) {
+  .info-section {
+    padding: 40px 10px;
+  }
+  .info-details li {
+    font-size: 14px;
+}
+}
+
+@media (max-width: 320px) {
+  .what-we-offer {
+    padding: 15px;
+  }
+
   .intro-section h1 {
-    font-size: 1.8rem; /* Further reduce heading size */
+    font-size: 24px;
   }
 
   .intro-section p {
-    font-size: 0.9rem; /* Adjust paragraph size */
+    font-size: 14px;
   }
 
   .features-grid {
-    grid-template-columns: 1fr; /* Single-column layout */
+    gap: 30px;
   }
 
   .feature-card {
-    padding: 10px; /* Further reduce card padding */
+    padding: 15px;
   }
 
   .feature-card h3 {
-    font-size: 1rem; /* Smaller title size */
+    font-size: 16px;
   }
 
   .feature-card p {
-    font-size: 0.8rem; /* Smaller text size */
+    font-size: 14px;
+  }
+
+  .info-section {
+    padding: 30px 5px;
+  }
+
+  .info-details h2 {
+    font-size: 22px;
+  }
+
+  .info-details p {
+    font-size: 14px;
+  }
+
+  .info-details h3 {
+    font-size: 18px;
+  }
+
+  .info-details li {
+    font-size: 12px;
   }
 }

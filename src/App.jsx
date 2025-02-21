@@ -8,7 +8,7 @@ import AboutUs from './components/AboutUs';
 // import Mission from './components/Mission';
  import Product from './components/Product';
 import Footer from './components/Footer';
-import InfoPage from './components/InfoPage';
+
 import ContactPage from './components/ContactPage';
 import HeroSection from './components/HeroSection';
 import ServicesPage from './components/ServicesPage';
@@ -34,7 +34,7 @@ const Home = () => {
       <ProductList />
       <ServicesPage />
       <WhatWeOffer />
-      <InfoPage />
+     
       {/* <Gallery /> */}
       {/* <ConsultancyServices /> */}
       {/* <MechanicalEngineering /> */}
@@ -63,7 +63,7 @@ const App = () => {
         {/* <Route path="/mission" element={<Mission />} /> */}
         <Route path="/productlist" element={<ProductList />} />
         <Route path="/footer" element={<Footer />} />
-        <Route path="/infopage" element={<InfoPage />} /> {/* Fixed "elements" typo */}
+     
         <Route path="/contactpage" element={<ContactPage />} />
         <Route path="/servicespage" element={<ServicesPage />} />
         <Route path="/whatweoffer" element={<WhatWeOffer />} />

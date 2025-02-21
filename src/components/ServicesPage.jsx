@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Services.css';
 
-
 const Services = () => {
   const services = [
     {
@@ -15,7 +14,6 @@ const Services = () => {
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUBkbETGBOr5-vnTTi9th3MP-hlQUbu2aOxg&s',
       link: "/mechanicalengineering"
     },
-    
     {
       title: 'O & M Services',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS059frnmzmI_KVvyU3GfNKC09N_JzAH79Obg&s',
@@ -27,7 +25,7 @@ const Services = () => {
       link: "/Instrumentation"
     },
     {
-      title: ' Electrical Services',
+      title: 'Electrical Services',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTte8ZOtfehxf9J4Lr7h60LtKt61xInSzM12g&s',
       link: "/electrical"
     },
@@ -55,8 +53,9 @@ const Services = () => {
           ))}
         </div>
       </div>
-    
+   
   );
 };
 
 export default Services;
+
