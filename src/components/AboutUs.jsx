@@ -9,11 +9,41 @@ import { FaCogs, FaRocket, FaUsers, FaGlobe, FaLightbulb, FaHandshake } from "re
 
 // Sample Team Data
 const teamMembers = [
-  { id: 1, name: "John Doe", position: "CEO", intro: "Visionary leader and strategist.", photo: "https://via.placeholder.com/120" },
-  { id: 2, name: "Jane Smith", position: "CTO", intro: "Innovative tech expert.", photo: "https://via.placeholder.com/120" },
-  { id: 3, name: "Mike Johnson", position: "COO", intro: "Operations and execution master.", photo: "https://via.placeholder.com/120" },
-  { id: 4, name: "Emily Davis", position: "CMO", intro: "Marketing and branding specialist.", photo: "https://via.placeholder.com/120" },
-  { id: 5, name: "Robert Brown", position: "CFO", intro: "Financial planning and management.", photo: "https://via.placeholder.com/120" },
+  {
+    id: 1,
+    name: "Mr. Sudhir Paatil",
+    position: "Managing Director",
+    photo: "https://randomuser.me/api/portraits/men/1.jpg",
+    intro: "He has 25+ years of experience, including 11 years as Chief Engineer, 2 years as Works Manager, and 3 years as Managing Director. He led expansions of sugar plants from 1250 TCD to 3000 TCD and pioneered the erection of a 2500 TCD Sugar Plant with a 22 MW Cogeneration plant.",
+  },
+  {
+    id: 2,
+    name: "Mr. Vikas Patil",
+    position: "Project Engineer",
+    photo: "https://randomuser.me/api/portraits/men/2.jpg",
+    intro: "With 25+ years of experience, he has 18+ years as a Project Engineer in Sugar Plant manufacturing companies. He has handled numerous sugar plant erection and commissioning projects in African countries and Vietnam.",
+  },
+  {
+    id: 3,
+    name: "Mr. Amarsinh Patil",
+    position: "Project Manager",
+    photo: "https://randomuser.me/api/portraits/men/3.jpg",
+    intro: "An expert in design, installation, and project management with 8+ years of experience in Sugar Plants, Power Plants, Pharmaceuticals, and Cement Plants. Specializes in Electrical & Instrumentation work across India, Africa, and Europe.",
+  },
+  {
+    id: 4,
+    name: "Emily White",
+    position: "Marketing Lead",
+    photo: "https://randomuser.me/api/portraits/women/4.jpg",
+    intro: "Creative strategist focused on brand development and outreach.",
+  },
+  {
+    id: 5,
+    name: "Michael Green",
+    position: "Lead Developer",
+    photo: "https://randomuser.me/api/portraits/men/5.jpg",
+    intro: "Coding wizard passionate about software architecture and innovation.",
+  },
 ];
 
 const AboutUs = () => {

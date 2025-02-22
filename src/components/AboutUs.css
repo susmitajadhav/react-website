@@ -5,7 +5,7 @@
 }
 
 /* Section Headings Styling */
-.meet-our-people_about h2,
+
 .about h2,
 .mission h2,
 .vision h2,
@@ -16,6 +16,15 @@
   font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 15px;
+  text-align: center;
+}
+
+.meet-our-people_about h2{
+  color: #048038;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 35px;
   text-align: center;
 }
 

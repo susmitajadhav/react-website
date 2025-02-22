@@ -112,7 +112,7 @@ const Projects = () => {
 
       {/* Customer Section */}
       <section className="satisfied-customers">
-        <h2>Our Satisfied Customers</h2>
+        <h2>Our Customers</h2>
         <motion.div
           className="customer-slider"
           animate={{ x: ["100%", "-100%"] }}
