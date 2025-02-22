@@ -129,7 +129,7 @@ const ContactPage = () => {
               <p>📞 +91 98765 43210 </p>
               <p>📧 Email: officesavtech@gmail.com</p>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.344993479203!2d74.2666605!3d17.0558593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1234567890abc%3A0xabcdef123456789!2sVrundavan%20Apartment!5e0!3m2!1sen!2sin!4v1640000000000"
+                src="https://www.google.com/maps/place/Krishnaji+More+,Druvanak+Apartment+Uran+Islampur+Behind+Anudatta+Medicals/@17.053301,74.2657356,17z/data=!4m6!3m5!1s0x3bc1750034ac68bd:0x9060d3979d64f011!8m2!3d17.0532959!4d74.2683105!16s%2Fg%2F11w7nsng_l?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D"
                 allowFullScreen
                 loading="lazy"
               ></iframe>
