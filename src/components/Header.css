@@ -93,7 +93,7 @@
 }
 
 .nav-links a:hover {
-  color: #dfdc0c;
+  color: #bdab08;
 }
 
 .custom-get-quote-btn:hover {
@@ -117,52 +117,109 @@
   background-color: #008c9e;
 }
 
-/* Side menu styles (for small screens) */
+/* Side menu styles (modern, animated) */
 .side-menu {
   position: fixed;
   top: 0;
   right: 0;
-  width: 250px;
+  width: 280px;
   height: 100%;
-  background: linear-gradient(to bottom, #00bcd4, #008c9e);
+  background: rgba(4, 128, 56, 0.9); /* Green theme with transparency */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
   color: white;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 100;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.4);
+  z-index: 200;
   padding-top: 3rem;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth animation */
   border-radius: 15px 0 0 15px;
   transform: translateX(100%); /* Initially hidden */
 }
 
+/* Slide-in effect */
 .side-menu.open {
-  transform: translateX(0); /* Slide in */
+  transform: translateX(0);
 }
 
+/* Stylish close button */
+.side-menu .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.side-menu .close-btn:hover {
+  transform: rotate(90deg) scale(1.2);
+  color: #fdd835;
+}
+
+/* Side menu links */
 .side-menu-links {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .side-menu-links li {
   padding: 1rem;
-  transition: background-color 0.3s ease;
-  border-bottom: 1px solid #444;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 
+/* Hover effect: glowing background */
 .side-menu-links li:hover {
-  background-color: #444;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.3);
 }
 
+/* Animated link text */
 .side-menu-links a {
   color: white;
   text-decoration: none;
   display: block;
   font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* Hover: Scale up and change color */
 .side-menu-links a:hover {
-  color: #f2f2f2;
+  color: #fdd835;
+  transform: scale(1.1);
+}
+
+/* Fancy animated underline */
+.side-menu-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #fdd835;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.side-menu-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .side-menu {
+    width: 100%;
+  }
+
+  .side-menu-links a {
+    font-size: 1rem;
+  }
 }
 
 /* Mobile styles (small screens) */
