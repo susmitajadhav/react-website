@@ -8,6 +8,7 @@ import AboutUs from './components/AboutUs';
 // import Mission from './components/Mission';
  import Product from './components/Product';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';  // Import ScrollToTop
 
 import ContactPage from './components/ContactPage';
 import HeroSection from './components/HeroSection';
@@ -25,6 +26,9 @@ import OM from './components/OM';
 import Electrical from './components/Electrical';
 import Instrumentation from './components/Instrumentation';
 import SupplyOfMachinery from './components/SupplyOfMachinary';
+import Laisoning from  './components/Laisoning';
+import LTInstallation  from './components/LTInstallation';
+import Solar from  './components/Solar';
 
 const Home = () => {
   return (
@@ -53,6 +57,7 @@ const Home = () => {
 const App = () => {
   return (
     <Router> {/* Add basename */}
+    <ScrollToTop /> {/* This ensures every page scrolls to top on route change */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/header" element={<Header />} />
@@ -79,6 +84,9 @@ const App = () => {
         <Route path="/Instrumentation" element={<Instrumentation />} />
         <Route path="/ConsultancyServices" element={<ConsultancyServices />} />
         <Route path="/supplyofmachinery" element={<SupplyOfMachinery />} />
+        <Route path="/Laisoning" element={<Laisoning />} />
+        <Route path="/LTInstallation" element={<LTInstallation />} />
+        <Route path="/solar" element={<Solar />} />
       
       </Routes>
     </Router>
