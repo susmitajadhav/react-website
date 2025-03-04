@@ -94,8 +94,16 @@ html, body {
   margin-bottom: 20px;
 }
 
+.consultancy_sub-list{
+  padding: 0px;
+}
+
+.consultancy_sub-list li{
+  content: "✦";
+}
+
 .consultancy_description {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 500;
   color: #0f8322;
   margin-bottom: 15px;
@@ -109,19 +117,19 @@ html, body {
 }
 
 .consultancy_list li {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   color: #444;
   padding: 10px 0;
   display: flex;
-  align-items: center;
+
   gap: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Custom Bullet Icons */
 .consultancy_list li::before {
-  content: "✔";
+  content: "➤";
   font-weight: bold;
   color: #ff7e5f;
   font-size: 20px;

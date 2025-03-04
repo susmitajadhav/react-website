@@ -18,21 +18,19 @@
 }
 
 /* Subheading h2 */
-.sub-heading {
+.sub-heading_panel {
     font-size: 2rem;
     color: #0b3d91;
     font-weight: bold;
-    text-transform: uppercase;
     margin-top: 40px;
     margin-bottom: 15px;
-    text-align: center;
-    position: relative;
+ text-align: center;
     padding-bottom: 8px;
-    display: inline-block;
+   
 }
 
 /* Underline Effect */
-.sub-heading::after {
+.sub-heading_panel::after {
     content: "";
     width: 50px;
     height: 4px;
@@ -149,11 +147,8 @@ h3:hover {
 }
 
 /* Features & Applications - Side by Side on Large Screens */
-.features-applications-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+.features-applications-container { 
     gap: 80px;
-   
     text-align:center;
     align-items: flex-start;
 }
@@ -220,7 +215,7 @@ h3:hover {
     .main-heading {
         font-size: 2rem;     
     }
-    .sub-heading {
+    .sub-heading_panel {
         font-size: 1.3rem;
     }
     .features-list li, .applications-list li {

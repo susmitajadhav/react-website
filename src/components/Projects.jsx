@@ -110,21 +110,24 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Customer Section */}
       <section className="satisfied-customers">
-        <h2>Our Customers</h2>
-        <motion.div
-          className="customer-slider"
-          animate={{ x: ["100%", "-100%"] }}
-          transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
-        >
-          {customers.map((customer) => (
-            <div key={customer.id} className="customer-logo">
-              <img src={customer.logo} alt={customer.name} />
-            </div>
-          ))}
-        </motion.div>
-      </section>
+  <h2>Our Customers</h2>
+  <div className="customer-slider">
+    <motion.div
+      className="customer-track"
+      animate={{ x: ["0%", "-50%"] }}
+      transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+    >
+      {[...customers, ...customers].map((customer, index) => (
+        <div key={index} className="customer-logo">
+          <img src={customer.logo} alt={customer.name} />
+        </div>
+      ))}
+    </motion.div>
+  </div>
+</section>
+
+
 
       <section className="meet-our-people">
       <h2 data-aos="fade-up">Meet Our People</h2>

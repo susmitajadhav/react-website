@@ -34,42 +34,41 @@
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 50px;
+  gap: 30px;
   justify-items: center;
 }
 
 /* Feature Card */
-.feature-card {
+.feature-card_w {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 20px;
+  padding:12px;
   transition: transform 0.3s, box-shadow 0.3s;
-  width: 100%;
-  max-width: 400px;
+
 }
 
-.feature-card:hover {
+.feature-card_w :hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-.feature-card .icon {
+.feature-card_w  .icon {
   font-size: 3rem;
   color: #007bff;
   margin-bottom: 15px;
 }
 
-.feature-card h3 {
+.feature-card_w  h3 {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 10px;
 }
 
-.feature-card p {
-  font-size: 1rem;
+.feature-card_w  p {
+  font-size: 0.9rem;
   color: #555;
   line-height: 1.5;
 }
@@ -217,15 +216,15 @@
     gap: 30px;
   }
 
-  .feature-card {
+  .feature-card_w  {
     padding: 15px;
   }
 
-  .feature-card h3 {
+  .feature-card_w  h3 {
     font-size: 16px;
   }
 
-  .feature-card p {
+  .feature-card_w  p {
     font-size: 14px;
   }
 

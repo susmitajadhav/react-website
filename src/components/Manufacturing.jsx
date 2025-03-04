@@ -50,7 +50,7 @@ const Manufacturing = () => {
         </div>
 
         <h2 className="manufacturing-subheading">Our Specialization Includes:</h2>
-        <div className="card-container">
+        <div className="card-container1">
           <motion.div
             className="manufacturing-card"
             whileHover={{ scale: 1.05 }}

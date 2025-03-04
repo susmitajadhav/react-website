@@ -59,12 +59,13 @@ html, body {
 }
 
 .contact-card {
-  background: linear-gradient(135deg, #ffffff, #f5f5f5);
+  background: linear-gradient(135deg, #ffffff, #e0dede);
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   animation: fadeInUp 0.8s ease-in-out forwards;
+ height: 395px;
 }
 
 .contact-card:hover {
@@ -189,7 +190,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   font-size: 1.1rem;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 /* ---------------- ADDITIONAL CLASS EXAMPLE ---------------- */
@@ -271,6 +272,7 @@ textarea:focus {
 
   .contact-card {
     padding: 20px;
+    height: auto;
   }
 
   .form-group {
@@ -313,6 +315,11 @@ textarea:focus {
 
   .contact-card {
     padding: 15px;
+    height: auto;
+  }
+
+  .contact-card li {
+    font-size: 1rem;
   }
 
   .form-group input,
@@ -351,6 +358,7 @@ textarea:focus {
 
   .contact-card {
     padding: 10px;
+    height:auto;
   }
 
   .contact_head {

@@ -15,7 +15,7 @@ const WhatWeOffer = () => {
 
       {/* Features Section */}
       <div className="features-grid">
-        <div className="feature-card">
+        <div className="feature-card_w ">
           <div className="icon">
             <i className="fas fa-cogs"></i>
           </div>
@@ -23,7 +23,7 @@ const WhatWeOffer = () => {
           <p>Leveraging cutting-edge technology for faster delivery, better production, and precise designs.</p>
         </div>
 
-        <div className="feature-card">
+        <div className="feature-card_w ">
           <div className="icon">
             <i className="fas fa-user-cog"></i>
           </div>
@@ -31,7 +31,7 @@ const WhatWeOffer = () => {
           <p>Our highly skilled team of engineers brings years of industrial expertise to every project.</p>
         </div>
 
-        <div className="feature-card">
+        <div className="feature-card_w ">
           <div className="icon">
             <i className="fas fa-headset"></i>
           </div>
@@ -39,7 +39,7 @@ const WhatWeOffer = () => {
           <p>We provide exceptional service and support to meet all client requirements.</p>
         </div>
 
-        <div className="feature-card">
+        <div className="feature-card_w ">
           <div className="icon">
             <i className="fas fa-truck"></i>
           </div>

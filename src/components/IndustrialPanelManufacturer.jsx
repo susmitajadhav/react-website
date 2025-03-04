@@ -53,7 +53,7 @@ function IndustrialPanelManufacturer() {
         <div className="features-applications-container" style={{ display: "block !important" }}>
 
           <div>
-            <h2 className="sub-heading">Key Features & Benefits:</h2>
+            <h2 className="sub-heading_panel">Key Features & Benefits:</h2>
             <ul className="features-list">
               <li><strong>Seamless Integration:</strong> Our panels integrate effortlessly into existing industrial systems.</li>
               <li><strong>Precision Engineering:</strong> Crafted with high precision to ensure top-notch performance.</li>
@@ -64,7 +64,7 @@ function IndustrialPanelManufacturer() {
           </div>
 
           <div>
-            <h3 className="sub-heading">Applications:</h3>
+            <h3 className="sub-heading_panel">Applications:</h3>
             <ul className="applications-list">
               <li>Sugar plants</li>
               <li>CO-Generation Plants</li>

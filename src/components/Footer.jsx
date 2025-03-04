@@ -1,74 +1,54 @@
-//Footer.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Footer.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
+        {/* Top Section */}
         <div className="footer-content">
-          <div className="footer-left">
+          {/* Company Info */}
+          <div className="footer-section footer-left">
             <h4>SAV-Tech Associate</h4>
-            <p>Innovative solutions for Sugar, Power Plant, Co-Generation, Distillery, Khandsar & Jaggery industries.</p>
+            <p>
+              Innovative solutions for Sugar, Power Plant, Co-Generation, Distillery,
+              Khandsar & Jaggery industries.
+            </p>
             <div className="footer-contact">
-              <p><strong>Phone:</strong> 9850827966, 7057104851, 953613890, 9503613890</p>
-              <p><strong>Email:</strong> officesavtech@gmail.com</p>
-              <p><strong>Address:</strong> Flat No.101, Vrundavan Apartment, Near Kusumgandh Garden,Pradhyapak Colony, Mahadevnagar, Uran Islampur 415409. </p>
+              <p><i className="fas fa-phone"></i> 9850827966, 7057104851</p>
+              <p><i className="fas fa-envelope"></i> officesavtech@gmail.com</p>
+              <p className="address">
+                <i className="fas fa-map-marker-alt"></i>
+                <span>Flat No.101, Vrundavan Apartment, Near Kusumgandh Garden, Pradhyapak Colony, Mahadevnagar, Uran Islampur 415409.</span>
+              </p>
+
             </div>
           </div>
 
-          <div className="footer-right">
+
+          {/* Navigation Links */}
+          <div className="footer-section">
             <h4>Navigation</h4>
             <ul>
-              <li>
-                <Link to="/" onClick={() => setIsMenuOpen(false)}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/aboutus" onClick={() => setIsMenuOpen(false)}>
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" onClick={() => setIsMenuOpen(false)}>
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/product" onClick={() => setIsMenuOpen(false)}>
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link to="/contactpage" onClick={() => setIsMenuOpen(false)}>
-                  Contact
-                </Link>
-              </li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/aboutus">About</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/product">Products</Link></li>
+              <li><Link to="/contactpage">Contact</Link></li>
             </ul>
           </div>
 
-          <div className="footer-right">
+          {/* Projects & Social Media */}
+          <div className="footer-section">
             <h4>Projects</h4>
             <ul>
-              <li>
-                <Link to="/manufacturing" onClick={() => setIsMenuOpen(false)}>
-                  Manufacturing of Machineries
-                </Link>
-              </li>
-              <li>
-                <Link to="/relay-card" onClick={() => setIsMenuOpen(false)}>
-                  RelayCardact
-                </Link>
-              </li>
-              <li>
-                <Link to="/industrial-panel-manufacturer" onClick={() => setIsMenuOpen(false)}>
-                  Industrial Panel Manufacturing
-                </Link>
-              </li>
+              <li><Link to="/manufacturing">Manufacturing of Machineries</Link></li>
+              <li><Link to="/relay-card">PLC & DCS System</Link></li>
+              <li><Link to="/industrial-panel-manufacturer">Industrial Panel Manufacturing</Link></li>
             </ul>
-            {/* Social Media Links Section */}
+
+            {/* Social Media Links */}
             <div className="footer-social">
               <h4>Follow Us</h4>
               <div className="social-links">
@@ -90,6 +70,11 @@ const Footer = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="footer-bottom">
+          <p>© 2025 SAV-Tech Associate. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

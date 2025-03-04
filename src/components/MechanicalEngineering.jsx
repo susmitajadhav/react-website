@@ -31,10 +31,10 @@ const MechanicalEngineering = () => {
             <li>
               🏭 Annual Maintenance Work for:
               <ul className="consultancy_sub-list">
-                <li>🔹 Total Sugar Plants</li>
-                <li>🔹 Co-Generation/Power Plants</li>
-                <li>🔹 Distillery & Ethanol Plants</li>
-                <li>🔹 Jaggery & Khandsary Plants</li>
+                <li> Total Sugar Plants</li>
+                <li> Co-Generation/Power Plants</li>
+                <li> Distillery & Ethanol Plants</li>
+                <li> Jaggery & Khandsary Plants</li>
               </ul>
             </li>
             <li>🔩 Boiling House Machinery Modification, Rectification & Upgradation</li>
